@@ -1,0 +1,8 @@
+# robots.txt — thefinallayer.uk
+# Generated 2026-05-22
+
+User-agent: *
+Allow: /
+
+# Point Google (and all crawlers) to the sitemap
+Sitemap: https://thefinallayer.uk/sitemap.xml
