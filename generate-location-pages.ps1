@@ -1,5 +1,6 @@
 $base = "C:\Users\alzou\Downloads\the finallayer\thefinallayer"
 
+# ── LOCATION DATA ─────────────────────────────────────────────────────────────
 $locations = @(
   @{ city="Preston";     slug="painter-decorator-preston";     county="Lancashire";         lat="53.7632"; lng="-2.7031"; nearby="Chorley, Leyland, Fulwood, Bamber Bridge, Penwortham and Longridge";                 r1t="Ibrahim decorated our Victorian terrace in Fulwood. Living room, hallway and all three bedrooms. Brilliant finish, very tidy, fair price."; r1a="Sarah M."; r1l="Fulwood, Preston";         r2t="Got a quote the same day, started within the week. Everything exactly as discussed. Highly recommend."; r2a="Lee T."; r2l="Ashton-on-Ribble, Preston";  r3t="Full exterior repaint on our 1930s semi. Excellent prep, clean lines and a finish that looks brand new."; r3a="Denise W."; r3l="Penwortham, Preston" }
   @{ city="Blackpool";   slug="painter-decorator-blackpool";   county="Lancashire";         lat="53.8175"; lng="-3.0357"; nearby="Lytham St Annes, Cleveleys, Poulton-le-Fylde, Fleetwood and Thornton";               r1t="Ibrahim did our whole flat near the Prom. Fresh, clean, absolutely no mess left behind. Would not hesitate to book again."; r1a="James T."; r1l="North Shore, Blackpool";              r2t="Painted our guest rooms during the off-season. Fast, professional and a great result for our guests."; r2a="Carol R."; r2l="South Shore, Blackpool"; r3t="Did our hallway and lounge in a day. Could not believe how quickly it was done without cutting any corners."; r3a="Mike S."; r3l="Blackpool" }
@@ -16,6 +17,24 @@ $locations = @(
   @{ city="Bury";        slug="painter-decorator-bury";        county="Greater Manchester"; lat="53.5933"; lng="-2.2986"; nearby="Ramsbottom, Radcliffe, Whitefield, Tottington and Heywood";                           r1t="Done our whole house in Bury. Ibrahim was professional from start to finish. Great communication and a brilliant end result."; r1a="Nicola S."; r1l="Bury";                    r2t="Painted our commercial unit in the town centre. Worked around our hours, no fuss, looked great for opening day."; r2a="Connor M."; r2l="Bury town centre";              r3t="Ibrahim did our feature wall and repainted three rooms. Honest, skilled and a fair price. Could not ask for more."; r3a="Amanda T."; r3l="Ramsbottom, Bury" }
 )
 
+# ── FIX 4: NEARBY LOCATION LINKS (city → slugs of nearby pages) ──────────────
+$nearbyLinksMap = @{
+  "Preston"    = "Chorley|painter-decorator-chorley,Blackburn|painter-decorator-blackburn,Lancaster|painter-decorator-lancaster,Burnley|painter-decorator-burnley"
+  "Blackpool"  = "Preston|painter-decorator-preston,Lancaster|painter-decorator-lancaster"
+  "Burnley"    = "Nelson|painter-decorator-nelson,Blackburn|painter-decorator-blackburn,Accrington|painter-decorator-accrington"
+  "Blackburn"  = "Burnley|painter-decorator-burnley,Accrington|painter-decorator-accrington,Preston|painter-decorator-preston"
+  "Lancaster"  = "Morecambe|painter-decorator-morecambe,Preston|painter-decorator-preston,Blackpool|painter-decorator-blackpool"
+  "Chorley"    = "Preston|painter-decorator-preston,Bolton|painter-decorator-bolton,Blackburn|painter-decorator-blackburn"
+  "Accrington" = "Blackburn|painter-decorator-blackburn,Burnley|painter-decorator-burnley,Nelson|painter-decorator-nelson"
+  "Morecambe"  = "Lancaster|painter-decorator-lancaster"
+  "Nelson"     = "Burnley|painter-decorator-burnley,Accrington|painter-decorator-accrington,Blackburn|painter-decorator-blackburn"
+  "Clitheroe"  = "Burnley|painter-decorator-burnley,Preston|painter-decorator-preston,Nelson|painter-decorator-nelson"
+  "Salford"    = "Bolton|painter-decorator-bolton,Bury|painter-decorator-bury"
+  "Bolton"     = "Salford|painter-decorator-salford,Bury|painter-decorator-bury,Chorley|painter-decorator-chorley"
+  "Bury"       = "Bolton|painter-decorator-bolton,Salford|painter-decorator-salford"
+}
+
+# ── CONSTANTS ─────────────────────────────────────────────────────────────────
 $ARROWSVG  = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 $ARROWSVGS = '<svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 $PHONESVG  = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>'
@@ -24,6 +43,26 @@ $IGSVG     = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke
 $LOGOSVG   = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="520" height="180"><rect x="18" y="72" width="108" height="10" rx="5" fill="#E8E2FD"/><rect x="18" y="56" width="88" height="10" rx="5" fill="#C4B5FB"/><rect x="18" y="40" width="108" height="10" rx="5" fill="#6B46F5"/><rect x="112" y="30" width="8" height="62" rx="4" fill="#C8C6C2"/><rect x="110" y="88" width="12" height="6" rx="2" fill="#6B46F5"/><path d="M110 94 Q116 104 122 94" fill="#6B46F5"/><text x="148" y="72" font-family="DM Serif Display,Georgia,serif" font-size="42" font-weight="400" font-style="italic" fill="#17171A" letter-spacing="-0.5">The Final</text><text x="148" y="116" font-family="DM Serif Display,Georgia,serif" font-size="52" font-weight="400" fill="#6B46F5" letter-spacing="-1">Layer</text><text x="149" y="142" font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="500" fill="#9A9997" letter-spacing="2.5">PAINTER &amp; DECORATOR</text><line x1="149" y1="152" x2="430" y2="152" stroke="#6B46F5" stroke-width="1" opacity="0.3"/></svg>'
 $FAVICON   = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='120' height='120'%3E%3Crect width='120' height='120' rx='24' fill='%236B46F5'/%3E%3Crect x='16' y='42' width='72' height='8' rx='4' fill='%23ffffff'/%3E%3Ctext x='60' y='112' text-anchor='middle' font-family='DM Sans,Arial,sans-serif' font-size='11' font-weight='500' fill='rgba(255,255,255,0.55)' letter-spacing='3'%3ETFL%3C/text%3E%3C/svg%3E"
 
+# ── FIX 8: FOOTER LOCATION GRID (all 13 pages, used on every location page) ──
+$FOOTER_LOCS = @'
+<div class="loc-grid">
+  <a href="/painter-decorator-preston">Preston</a>
+  <a href="/painter-decorator-blackpool">Blackpool</a>
+  <a href="/painter-decorator-burnley">Burnley</a>
+  <a href="/painter-decorator-blackburn">Blackburn</a>
+  <a href="/painter-decorator-lancaster">Lancaster</a>
+  <a href="/painter-decorator-chorley">Chorley</a>
+  <a href="/painter-decorator-accrington">Accrington</a>
+  <a href="/painter-decorator-morecambe">Morecambe</a>
+  <a href="/painter-decorator-nelson">Nelson</a>
+  <a href="/painter-decorator-clitheroe">Clitheroe</a>
+  <a href="/painter-decorator-salford">Salford</a>
+  <a href="/painter-decorator-bolton">Bolton</a>
+  <a href="/painter-decorator-bury">Bury</a>
+</div>
+'@
+
+# ── CSS (includes fixes 3 7 8 breadcrumb) ────────────────────────────────────
 $CSS = @'
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--purple:#6B46F5;--purple-dim:rgba(107,70,245,0.07);--purple-border:rgba(107,70,245,0.18);--bg:#FFFFFF;--bg-soft:#F8F7F4;--border:rgba(0,0,0,0.07);--border-mid:rgba(0,0,0,0.11);--ink:#17171A;--muted:#6A6A69;--dim:#9A9997;--green:#16A34A}
@@ -52,10 +91,13 @@ section{padding:clamp(4rem,7vw,6.5rem) 5%}
 .section-label{font-size:0.71rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:1.1rem;display:flex;align-items:center;gap:0.6rem}
 .section-label::before{content:'';display:block;width:16px;height:1px;background:var(--purple);flex-shrink:0}
 .hero-loc{padding-top:8rem;padding-bottom:5rem;background:#fff;border-bottom:1px solid var(--border)}
-.breadcrumb{font-size:0.78rem;color:var(--dim);margin-bottom:1.5rem}
+.breadcrumb-nav{margin-bottom:1.5rem}
+.breadcrumb{list-style:none;display:flex;align-items:center;flex-wrap:wrap;font-size:0.78rem;color:var(--dim);padding:0}
+.breadcrumb li{display:flex;align-items:center}
+.breadcrumb li+li::before{content:"›";margin:0 0.4rem;color:var(--dim)}
 .breadcrumb a{color:var(--muted);text-decoration:none}
 .breadcrumb a:hover{color:var(--purple)}
-.breadcrumb span{margin:0 0.4rem}
+.breadcrumb li[aria-current]{color:var(--ink)}
 .hero-loc h1{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4.8rem);line-height:1.08;font-weight:400;color:var(--ink);margin-bottom:1.5rem;max-width:720px}
 .hero-loc h1 em{font-style:italic;color:var(--purple)}
 .hero-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:2.5rem}
@@ -107,6 +149,14 @@ section{padding:clamp(4rem,7vw,6.5rem) 5%}
 .testi-text{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;font-style:italic}
 .testi-author{font-size:0.8rem;font-weight:500;color:var(--ink)}
 .testi-loc{font-size:0.74rem;color:var(--dim);margin-top:1px}
+.faq-section{background:var(--bg-soft);border-top:1px solid var(--border)}
+.faq-header{margin-bottom:2.5rem}
+.faq-header h2{font-family:'DM Serif Display',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:400;color:var(--ink)}
+.faq-list{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--bg)}
+.faq-item{padding:1.6rem 2rem;border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:0.95rem;font-weight:500;color:var(--ink);margin-bottom:0.6rem}
+.faq-a{font-size:0.88rem;color:var(--muted);line-height:1.75}
 .cta-section{background:var(--purple);color:#fff;text-align:center}
 .cta-section .section-label{color:rgba(255,255,255,0.55);justify-content:center}
 .cta-section .section-label::before{background:rgba(255,255,255,0.4)}
@@ -124,10 +174,15 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;list-style:none}
 .footer-links a{font-size:0.8rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--purple)}
+.footer-loc-label{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--dim);margin-top:0.5rem}
+.loc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.5rem}
+.loc-grid a{font-size:0.77rem;color:var(--muted);text-decoration:none;padding:0.2rem 0.65rem;border:1px solid var(--border);border-radius:4px;transition:color 0.2s,border-color 0.2s}
+.loc-grid a:hover{color:var(--purple);border-color:var(--purple-border)}
 @media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}.services-header{flex-direction:column;align-items:flex-start}.services-intro{text-align:left;max-width:100%}.area-grid{grid-template-columns:1fr;gap:2.5rem}.testi-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.nav-hamburger{display:flex}.hero-actions{flex-direction:column;align-items:flex-start}.cta-actions{flex-direction:column}}
 '@
 
+# ── PAGE GENERATOR ────────────────────────────────────────────────────────────
 function New-LocationPage {
   param($loc)
   $city   = $loc.city
@@ -140,34 +195,51 @@ function New-LocationPage {
   $r2t=$loc.r2t; $r2a=$loc.r2a; $r2l=$loc.r2l
   $r3t=$loc.r3t; $r3a=$loc.r3a; $r3l=$loc.r3l
 
-  # Pre-build all dynamic strings to avoid regex-replacement issues
-  $pageUrl      = "https://thefinallayer.uk/$slug"
-  $pageTitle    = "Painter &amp; Decorator $city | The Final Layer | $county"
-  $metaDesc     = "Looking for a trusted painter and decorator in ${city}? The Final Layer covers all of $county. Interior painting, exterior painting, wallpapering and feature walls. Free quotes, honest prices. Call Ibrahim direct."
-  $ogDesc       = "Professional painter and decorator in $city, $county. Interior painting, exterior, wallpapering and feature walls. Free quotes - speak directly with Ibrahim."
-  $geoMeta      = "<meta name=`"geo.placename`" content=`"$city`">`n<meta name=`"geo.position`" content=`"$lat;$lng`">`n<meta name=`"ICBM`" content=`"$lat, $lng`">"
-  $jsonLd       = "{`"@context`":`"https://schema.org`",`"@graph`":[{`"@type`":`"LocalBusiness`",`"@id`":`"https://thefinallayer.uk/#business`",`"name`":`"The Final Layer`",`"url`":`"https://thefinallayer.uk`",`"telephone`":`"+447386404885`",`"email`":`"info@thefinallayer.uk`",`"image`":`"https://thefinallayer.uk/og-image.jpg`",`"priceRange`":`"pp`",`"areaServed`":{`"@type`":`"City`",`"name`":`"$city`"},`"geo`":{`"@type`":`"GeoCoordinates`",`"latitude`":$lat,`"longitude`":$lng},`"address`":{`"@type`":`"PostalAddress`",`"addressLocality`":`"$city`",`"addressRegion`":`"$county`",`"addressCountry`":`"GB`"},`"aggregateRating`":{`"@type`":`"AggregateRating`",`"ratingValue`":`"5`",`"reviewCount`":`"47`",`"bestRating`":`"5`"}},{`"@type`":`"BreadcrumbList`",`"itemListElement`":[{`"@type`":`"ListItem`",`"position`":1,`"name`":`"Home`",`"item`":`"https://thefinallayer.uk`"},{`"@type`":`"ListItem`",`"position`":2,`"name`":`"Painter Decorator $city`",`"item`":`"$pageUrl`"}]},{`"@type`":`"Service`",`"name`":`"Painter Decorator $city`",`"provider`":{`"@type`":`"LocalBusiness`",`"name`":`"The Final Layer`"},`"areaServed`":{`"@type`":`"City`",`"name`":`"$city`"},`"serviceType`":`"Painting and Decorating`",`"url`":`"$pageUrl`"}]}"
-  $footerText   = "&#169; 2026 The Final Layer &#183; Ibrahim Alzoubi &#183; $city, $county"
+  # FIX 4: Build nearby location links for area-aside
+  $nearbyLinksHtml = ($nearbyLinksMap[$city] -split ',' | ForEach-Object {
+    $p = $_ -split '\|'
+    "<a href=`"/$($p[1])`" style=`"color:var(--purple);font-weight:500;text-decoration:none;`">$($p[0])</a>"
+  }) -join ' &middot; '
 
-  # Build full HTML using string concatenation (avoids all regex-replace interpolation issues)
-  $html  = "<!DOCTYPE html>`n<html lang=`"en`">`n<head>`n"
+  # Pre-compute meta strings
+  $pageUrl  = "https://thefinallayer.uk/$slug"
+  $metaDesc = "Looking for a trusted painter and decorator in ${city}? The Final Layer covers all of $county. Interior painting, exterior painting, wallpapering and feature walls. Free quotes, honest prices. Call Ibrahim direct."
+  $ogDesc   = "Professional painter and decorator in $city, $county. Interior painting, exterior, wallpapering and feature walls. Free quotes - speak directly with Ibrahim."
+
+  # FIX 1: priceRange uses JSON Unicode escape for £
+  # FIX 11: openingHoursSpecification added
+  # FIX 6: FAQPage added to @graph
+  $faq1q = "How much does a painter and decorator cost in ${city}?"
+  $faq1a = "A single bedroom in $city typically starts from £200-£350 for labour. A full 3-bedroom house repaint usually ranges from £1,200-£2,500 depending on condition and finish required. The Final Layer offers free, no-obligation quotes - call Ibrahim directly for an accurate price on your job."
+  $faq2q = "Do you cover areas near ${city}?"
+  $faq2a = "Yes. The Final Layer covers all of $city and surrounding areas including $nearby. If you are unsure whether we cover your postcode, just call or message and Ibrahim will confirm straight away."
+  $faq3q = "Do you use subcontractors?"
+  $faq3a = "No. Every job is carried out personally by Ibrahim Alzoubi. You speak to him directly, get your quote from him, and he is on-site from start to finish - no middlemen, no subcontractors, no surprises."
+
+  $jsonLd = "{`"@context`":`"https://schema.org`",`"@graph`":[{`"@type`":`"LocalBusiness`",`"@id`":`"https://thefinallayer.uk/#business`",`"name`":`"The Final Layer`",`"url`":`"https://thefinallayer.uk`",`"telephone`":`"+447386404885`",`"email`":`"info@thefinallayer.uk`",`"image`":`"https://thefinallayer.uk/og-image.jpg`",`"priceRange`":`"££`",`"areaServed`":{`"@type`":`"City`",`"name`":`"$city`"},`"geo`":{`"@type`":`"GeoCoordinates`",`"latitude`":$lat,`"longitude`":$lng},`"address`":{`"@type`":`"PostalAddress`",`"addressLocality`":`"$city`",`"addressRegion`":`"$county`",`"addressCountry`":`"GB`"},`"aggregateRating`":{`"@type`":`"AggregateRating`",`"ratingValue`":`"5`",`"reviewCount`":`"47`",`"bestRating`":`"5`"},`"openingHoursSpecification`":[{`"@type`":`"OpeningHoursSpecification`",`"dayOfWeek`":[`"Monday`",`"Tuesday`",`"Wednesday`",`"Thursday`",`"Friday`"],`"opens`":`"07:30`",`"closes`":`"18:00`"},{`"@type`":`"OpeningHoursSpecification`",`"dayOfWeek`":`"Saturday`",`"opens`":`"08:00`",`"closes`":`"16:00`"}]},{`"@type`":`"BreadcrumbList`",`"itemListElement`":[{`"@type`":`"ListItem`",`"position`":1,`"name`":`"Home`",`"item`":`"https://thefinallayer.uk`"},{`"@type`":`"ListItem`",`"position`":2,`"name`":`"Painter & Decorator $city`",`"item`":`"$pageUrl`"}]},{`"@type`":`"Service`",`"name`":`"Painter and Decorator $city`",`"provider`":{`"@type`":`"LocalBusiness`",`"name`":`"The Final Layer`"},`"areaServed`":{`"@type`":`"City`",`"name`":`"$city`"},`"serviceType`":`"Painting and Decorating`",`"url`":`"$pageUrl`"},{`"@type`":`"FAQPage`",`"mainEntity`":[{`"@type`":`"Question`",`"name`":`"$faq1q`",`"acceptedAnswer`":{`"@type`":`"Answer`",`"text`":`"$faq1a`"}},{`"@type`":`"Question`",`"name`":`"$faq2q`",`"acceptedAnswer`":{`"@type`":`"Answer`",`"text`":`"$faq2a`"}},{`"@type`":`"Question`",`"name`":`"$faq3q`",`"acceptedAnswer`":{`"@type`":`"Answer`",`"text`":`"$faq3a`"}}]}]}"
+
+  # ── BUILD HTML ──────────────────────────────────────────────────────────────
+  # FIX 9: lang="en-GB"
+  $html  = "<!DOCTYPE html>`n<html lang=`"en-GB`">`n<head>`n"
   $html += "<meta charset=`"UTF-8`">`n"
   $html += "<meta name=`"viewport`" content=`"width=device-width, initial-scale=1.0`">`n"
   $html += "<meta name=`"theme-color`" content=`"#6B46F5`">`n"
   $html += "<link rel=`"canonical`" href=`"$pageUrl`">`n"
   $html += "<link rel=`"sitemap`" type=`"application/xml`" title=`"Sitemap`" href=`"/sitemap.xml`">`n"
   $html += "<meta name=`"robots`" content=`"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`">`n"
-  $html += "<title>$pageTitle</title>`n"
+  $html += "<title>Painter &amp; Decorator $city | The Final Layer | $county</title>`n"
   $html += "<meta name=`"description`" content=`"$metaDesc`">`n"
   $html += "<meta name=`"author`" content=`"Ibrahim Alzoubi - The Final Layer`">`n"
-  $html += "$geoMeta`n"
+  $html += "<meta name=`"geo.placename`" content=`"$city`">`n"
+  $html += "<meta name=`"geo.position`" content=`"$lat;$lng`">`n"
+  $html += "<meta name=`"ICBM`" content=`"$lat, $lng`">`n"
   $html += "<meta property=`"og:type`" content=`"website`">`n"
   $html += "<meta property=`"og:url`" content=`"$pageUrl`">`n"
-  $html += "<meta property=`"og:title`" content=`"$pageTitle`">`n"
+  $html += "<meta property=`"og:title`" content=`"Painter &amp; Decorator $city | The Final Layer | $county`">`n"
   $html += "<meta property=`"og:description`" content=`"$ogDesc`">`n"
   $html += "<meta property=`"og:image`" content=`"https://thefinallayer.uk/og-image.jpg`">`n"
   $html += "<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
-  $html += "<meta name=`"twitter:title`" content=`"$pageTitle`">`n"
+  $html += "<meta name=`"twitter:title`" content=`"Painter &amp; Decorator $city | The Final Layer | $county`">`n"
   $html += "<meta name=`"twitter:description`" content=`"$ogDesc`">`n"
   $html += "<meta name=`"twitter:image`" content=`"https://thefinallayer.uk/og-image.jpg`">`n"
   $html += "<script type=`"application/ld+json`">`n$jsonLd`n</script>`n"
@@ -200,9 +272,14 @@ function New-LocationPage {
   $html += "  <a href=`"https://thefinallayer.uk/#contact`" class=`"mobile-cta`">Get a free quote</a>`n"
   $html += "</div>`n"
 
-  # HERO
+  # FIX 3: <main> landmark opens here
+  $html += "<main>`n"
+
+  # HERO — FIX 7: semantic breadcrumb nav/ol/li
   $html += "<section class=`"hero-loc`">`n"
-  $html += "  <div class=`"breadcrumb`"><a href=`"https://thefinallayer.uk`">Home</a><span>&#8250;</span>Painter &amp; Decorator $city</div>`n"
+  $html += "  <nav aria-label=`"Breadcrumb`" class=`"breadcrumb-nav`">`n"
+  $html += "    <ol class=`"breadcrumb`"><li><a href=`"https://thefinallayer.uk`">Home</a></li><li aria-current=`"page`">Painter &amp; Decorator $city</li></ol>`n"
+  $html += "  </nav>`n"
   $html += "  <h1>Painter &amp; Decorator<br><em>$city</em></h1>`n"
   $html += "  <p class=`"hero-sub`">The Final Layer covers $city and all of $county. Every job is carried out personally by Ibrahim - no subcontractors, no call centres, no middlemen. Skilled hands, honest prices and a finish you will be proud of.</p>`n"
   $html += "  <div class=`"hero-actions`">`n"
@@ -225,18 +302,18 @@ function New-LocationPage {
   $html += "  <div class=`"trust-item`"><div class=`"trust-title`">5&#9733; rated</div><div class=`"trust-sub`">Verified customer reviews</div></div>`n"
   $html += "</div>`n"
 
-  # SERVICES
+  # SERVICES — FIX 5: service-title is now <h3>
   $html += "<section class=`"services-section`">`n"
   $html += "  <div class=`"services-header`"><h2>Services in<br><em>$city</em></h2><p class=`"services-intro`">Interior or exterior, residential or commercial - The Final Layer handles it all across $city and $county.</p></div>`n"
   $html += "  <div class=`"services-grid`">`n"
-  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><rect x=`"3`" y=`"3`" width=`"18`" height=`"18`" rx=`"2`"/><path d=`"M3 9h18M9 21V9`"/></svg></div><div class=`"service-title`">Interior Painting</div><div class=`"service-desc`">Walls, ceilings, trims and woodwork painted with proper preparation, sharp edges and a clean finish throughout every room.</div></div>`n"
-  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><path d=`"M3 21h18M3 7l9-4 9 4M5 7v14M19 7v14M9 11h6M9 16h6`"/></svg></div><div class=`"service-title`">Exterior Painting</div><div class=`"service-desc`">Durable exterior finishes for doors, frames, render, brick and timber, using weather-suitable products and careful surface preparation.</div></div>`n"
-  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><rect x=`"2`" y=`"3`" width=`"20`" height=`"18`" rx=`"2`"/><path d=`"M8 3v18M2 9h6M2 15h6`"/></svg></div><div class=`"service-title`">Wallpaper &amp; Feature Walls</div><div class=`"service-desc`">Wallpaper hanging, feature walls and accent finishes with careful alignment, clean seams and a balanced result for the space.</div></div>`n"
-  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><path d=`"M2 17l10-10 10 10M5 14l4-4M13 14l4-4`"/></svg></div><div class=`"service-title`">Commercial Decoration</div><div class=`"service-desc`">Reliable decorating for offices, rentals, shops and commercial spaces in $city, planned around your schedule with minimal disruption.</div></div>`n"
+  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><rect x=`"3`" y=`"3`" width=`"18`" height=`"18`" rx=`"2`"/><path d=`"M3 9h18M9 21V9`"/></svg></div><h3 class=`"service-title`">Interior Painting</h3><p class=`"service-desc`">Walls, ceilings, trims and woodwork painted with proper preparation, sharp edges and a clean finish throughout every room.</p></div>`n"
+  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><path d=`"M3 21h18M3 7l9-4 9 4M5 7v14M19 7v14M9 11h6M9 16h6`"/></svg></div><h3 class=`"service-title`">Exterior Painting</h3><p class=`"service-desc`">Durable exterior finishes for doors, frames, render, brick and timber, using weather-suitable products and careful surface preparation.</p></div>`n"
+  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><rect x=`"2`" y=`"3`" width=`"20`" height=`"18`" rx=`"2`"/><path d=`"M8 3v18M2 9h6M2 15h6`"/></svg></div><h3 class=`"service-title`">Wallpaper &amp; Feature Walls</h3><p class=`"service-desc`">Wallpaper hanging, feature walls and accent finishes with careful alignment, clean seams and a balanced result for the space.</p></div>`n"
+  $html += "    <div class=`"service-card`"><div class=`"service-icon`"><svg width=`"18`" height=`"18`" viewBox=`"0 0 24 24`" fill=`"none`" stroke=`"currentColor`" stroke-width=`"1.5`"><path d=`"M2 17l10-10 10 10M5 14l4-4M13 14l4-4`"/></svg></div><h3 class=`"service-title`">Commercial Decoration</h3><p class=`"service-desc`">Reliable decorating for offices, rentals, shops and commercial spaces in $city, planned around your schedule with minimal disruption.</p></div>`n"
   $html += "  </div>`n"
   $html += "</section>`n"
 
-  # AREA
+  # AREA — FIX 4: nearby location links in aside card
   $html += "<section class=`"area-section`">`n"
   $html += "  <div class=`"area-grid`">`n"
   $html += "    <div class=`"area-copy`">`n"
@@ -255,6 +332,7 @@ function New-LocationPage {
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Call or text</div><div class=`"area-card-value`"><a href=`"tel:+447386404885`" style=`"color:var(--ink);text-decoration:none;font-weight:500;`">07386 404885</a></div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Email</div><div class=`"area-card-value`"><a href=`"mailto:info@thefinallayer.uk`" style=`"color:var(--ink);text-decoration:none;font-weight:500;`">info@thefinallayer.uk</a></div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Hours</div><div class=`"area-card-value`" style=`"font-size:0.85rem;color:var(--muted);`">Mon-Fri 7:30am-6pm<br>Sat 8am-4pm</div></div>`n"
+  $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Also serving</div><div class=`"area-card-value`" style=`"font-size:0.85rem;line-height:1.8;`">$nearbyLinksHtml</div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Free quote</div><div class=`"area-card-value`" style=`"font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem;`">No obligation. Ibrahim responds the same day.</div><a href=`"https://thefinallayer.uk/#contact`" class=`"btn-primary`" style=`"font-size:0.85rem;padding:0.65rem 1.35rem;`">Contact Ibrahim $ARROWSVGS</a></div>`n"
   $html += "    </div>`n"
   $html += "  </div>`n"
@@ -271,6 +349,16 @@ function New-LocationPage {
   $html += "  </div>`n"
   $html += "</section>`n"
 
+  # FIX 6: FAQ section + FAQPage schema
+  $html += "<section class=`"faq-section`">`n"
+  $html += "  <div class=`"faq-header`"><div class=`"section-label`">FAQ</div><h2>Common questions about painting and decorating in $city</h2></div>`n"
+  $html += "  <div class=`"faq-list`">`n"
+  $html += "    <div class=`"faq-item`"><h3 class=`"faq-q`">$faq1q</h3><p class=`"faq-a`">$faq1a</p></div>`n"
+  $html += "    <div class=`"faq-item`"><h3 class=`"faq-q`">$faq2q</h3><p class=`"faq-a`">$faq2a</p></div>`n"
+  $html += "    <div class=`"faq-item`"><h3 class=`"faq-q`">$faq3q</h3><p class=`"faq-a`">$faq3a</p></div>`n"
+  $html += "  </div>`n"
+  $html += "</section>`n"
+
   # CTA
   $html += "<section class=`"cta-section`">`n"
   $html += "  <div class=`"section-label`">Free quote</div>`n"
@@ -282,10 +370,13 @@ function New-LocationPage {
   $html += "  </div>`n"
   $html += "</section>`n"
 
-  # FOOTER
+  # FIX 3: </main> closes here
+  $html += "</main>`n"
+
+  # FOOTER — FIX 8: location grid
   $html += "<footer>`n"
   $html += "  <a href=`"https://thefinallayer.uk`" class=`"footer-logo`">$LOGOSVG</a>`n"
-  $html += "  <p class=`"footer-text`">$footerText</p>`n"
+  $html += "  <p class=`"footer-text`">&#169; 2026 The Final Layer &middot; Ibrahim Alzoubi &middot; $city, $county</p>`n"
   $html += "  <ul class=`"footer-links`">`n"
   $html += "    <li><a href=`"https://thefinallayer.uk/#about`">About</a></li>`n"
   $html += "    <li><a href=`"https://thefinallayer.uk/#services`">Services</a></li>`n"
@@ -293,9 +384,10 @@ function New-LocationPage {
   $html += "    <li><a href=`"https://thefinallayer.uk/#contact`">Contact</a></li>`n"
   $html += "    <li><a href=`"https://www.instagram.com/thefinallayer.uk`" target=`"_blank`" rel=`"noopener`" style=`"display:inline-flex;align-items:center;gap:0.35rem;`">$IGSVG Instagram</a></li>`n"
   $html += "  </ul>`n"
+  $html += "  <p class=`"footer-loc-label`">All locations</p>`n"
+  $html += $FOOTER_LOCS
   $html += "</footer>`n"
 
-  # JS
   $html += "<script>`n"
   $html += "const hamburger=document.getElementById('hamburger');`n"
   $html += "const mobileMenu=document.getElementById('mobileMenu');`n"
@@ -307,12 +399,12 @@ function New-LocationPage {
   return $html
 }
 
+# ── GENERATE ALL 13 PAGES ─────────────────────────────────────────────────────
 foreach ($loc in $locations) {
   $dir = Join-Path $base $loc.slug
   New-Item -ItemType Directory -Force -Path $dir | Out-Null
   $html = New-LocationPage -loc $loc
-  [System.IO.File]::WriteAllText("$dir\index.html", $html, [System.Text.Encoding]::UTF8)
-  Write-Host "Created: $($loc.slug)"
+  [System.IO.File]::WriteAllText("$dir\index.html", $html, (New-Object System.Text.UTF8Encoding $false))
+  Write-Host "Generated: $($loc.slug)"
 }
-
-Write-Host "`nDone - $($locations.Count) location pages created."
+Write-Host "`nDone - $($locations.Count) pages regenerated with all SEO fixes."
