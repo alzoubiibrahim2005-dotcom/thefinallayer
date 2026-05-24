@@ -364,7 +364,7 @@ function New-LocationPage {
   # CTA
   $html += "<section class=`"cta-section`">`n"
   $html += "  <div class=`"section-label`">Free quote</div>`n"
-  $html += "  <h2>Ready to get started<br>in <em>$city</em>?</h2>`n"
+  $html += "  <h2>Ready for <em>The Final Layer?</em></h2>`n"
   $html += "  <p>Call or message Ibrahim directly. No call centre, no form that goes nowhere. A real person answers and a quote follows the same day.</p>`n"
   $html += "  <div class=`"cta-actions`">`n"
   $html += "    <a href=`"https://thefinallayer.uk/#contact`" class=`"btn-white`">Get a free quote $ARROWSVG</a>`n"
