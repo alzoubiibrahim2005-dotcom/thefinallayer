@@ -180,6 +180,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
 .loc-grid a:hover{color:var(--purple);border-color:var(--purple-border)}
 @media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}.services-header{flex-direction:column;align-items:flex-start}.services-intro{text-align:left;max-width:100%}.area-grid{grid-template-columns:1fr;gap:2.5rem}.testi-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.nav-hamburger{display:flex}.hero-actions{flex-direction:column;align-items:flex-start}.cta-actions{flex-direction:column}}
+@media(max-width:600px){section{padding:3rem 5%}.hero-loc{padding-top:5.5rem;padding-bottom:3rem}.hero-loc h1{font-size:2rem}.hero-sub{font-size:0.9rem}.trust-strip{grid-template-columns:1fr}.hero-stats{gap:1.5rem}.cta-section h2{font-size:1.9rem}.faq-item{padding:1.2rem 1.25rem}}
 '@
 
 # ── PAGE GENERATOR ────────────────────────────────────────────────────────────
