@@ -347,8 +347,8 @@ ${nav()}
 </div>
 <section class="cta-section">
   <div class="section-label">Free quote</div>
-  <h2>Ready to get started?<br><em>Call Ibrahim today</em></h2>
-  <p>No call centre, no form that goes nowhere. A real person answers and a quote follows the same day.</p>
+  <h2>Ready for <em>The Final Layer?</em></h2>
+  <p>No call centres, no contact forms. Ibrahim answers directly and gets you a quote the same day.</p>
   <div class="cta-actions">
     <a href="https://thefinallayer.uk/#contact" class="btn-white">Get a free quote ${ARROW}</a>
     <a href="tel:+447386404885" class="cta-phone">${PHONE} 07386 404885</a>
