@@ -1,0 +1,12 @@
+{
+  "name": "thefinallayer-blog-generator",
+  "version": "1.0.0",
+  "description": "Automated blog post generator for thefinallayer.uk",
+  "main": "generate-blog-post.js",
+  "scripts": {
+    "generate": "node generate-blog-post.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.56.0"
+  }
+}
