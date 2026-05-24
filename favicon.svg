@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#6B46F5"/>
+  <!-- handle -->
+  <rect x="14" y="3" width="4" height="12" rx="2" fill="white"/>
+  <!-- ferrule band -->
+  <rect x="12" y="15" width="8" height="3" rx="1" fill="rgba(255,255,255,0.75)"/>
+  <!-- bristles -->
+  <path d="M12.5 18 C12 22 14 28 16 28 C18 28 20 22 19.5 18 Z" fill="white"/>
+</svg>

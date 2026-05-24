@@ -207,6 +207,8 @@ function head({ title, description, url, css }) {
   return `<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
 <meta name="theme-color" content="#6B46F5">
 <link rel="canonical" href="${url}">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
