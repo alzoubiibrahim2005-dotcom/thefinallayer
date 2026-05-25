@@ -88,7 +88,7 @@ const TOPICS = [
 
 // ── SVG constants (match location pages exactly) ──────────────────────────────
 const LOGO = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="520" height="180"><rect x="18" y="72" width="108" height="10" rx="5" fill="#E8E2FD"/><rect x="18" y="56" width="88" height="10" rx="5" fill="#C4B5FB"/><rect x="18" y="40" width="108" height="10" rx="5" fill="#6B46F5"/><rect x="112" y="30" width="8" height="62" rx="4" fill="#C8C6C2"/><rect x="110" y="88" width="12" height="6" rx="2" fill="#6B46F5"/><path d="M110 94 Q116 104 122 94" fill="#6B46F5"/><text x="148" y="72" font-family="DM Serif Display,Georgia,serif" font-size="42" font-weight="400" font-style="italic" fill="#17171A" letter-spacing="-0.5">The Final</text><text x="148" y="116" font-family="DM Serif Display,Georgia,serif" font-size="52" font-weight="400" fill="#6B46F5" letter-spacing="-1">Layer</text><text x="149" y="142" font-family="DM Sans,Arial,sans-serif" font-size="13" font-weight="500" fill="#9A9997" letter-spacing="2.5">PAINTER &amp; DECORATOR</text><line x1="149" y1="152" x2="430" y2="152" stroke="#6B46F5" stroke-width="1" opacity="0.3"/></svg>';
-const FAVICON = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120' width='120' height='120'%3E%3Crect width='120' height='120' rx='24' fill='%236B46F5'/%3E%3Crect x='16' y='42' width='72' height='8' rx='4' fill='%23ffffff'/%3E%3Ctext x='60' y='112' text-anchor='middle' font-family='DM Sans,Arial,sans-serif' font-size='11' font-weight='500' fill='rgba(255,255,255,0.55)' letter-spacing='3'%3ETFL%3C/text%3E%3C/svg%3E";
+
 const ARROW  = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const IG     = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
 const PHONE  = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>';
@@ -278,7 +278,6 @@ ${css.jsonLd}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9RYJJVZLJ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V9RYJJVZLJ');</script>
-<link rel="icon" type="image/svg+xml" href="${FAVICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
