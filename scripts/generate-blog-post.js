@@ -11,32 +11,79 @@ const SITEMAP    = path.join(ROOT, 'sitemap.xml');
 
 // ── Topics: one generated per weekly run ──────────────────────────────────────
 const TOPICS = [
+  // ── Already published ──────────────────────────────────────────────────────
   { slug: 'painter-decorator-cost-manchester',           title: 'How Much Does a Painter and Decorator Cost in Manchester? [2026 Guide]',        focus: 'painter decorator cost Manchester 2026' },
   { slug: 'how-to-prepare-walls-for-painting',           title: 'How to Prepare Walls for Painting: A Step-by-Step Guide',                        focus: 'how to prepare walls for painting UK' },
-  { slug: 'best-paint-colours-victorian-terraces',       title: 'Best Paint Colours for Victorian Terraces in Lancashire and Manchester',          focus: 'paint colours Victorian terrace Lancashire' },
-  { slug: 'exterior-painting-manchester-guide',          title: 'Exterior House Painting in Manchester: What You Need to Know',                    focus: 'exterior house painting Manchester guide' },
-  { slug: 'wallpaper-hanging-costs-manchester',          title: 'Wallpaper Hanging in Manchester: Costs, Tips and What to Expect',                 focus: 'wallpaper hanging Manchester cost' },
-  { slug: 'feature-wall-ideas-manchester-homes',         title: 'Feature Wall Ideas for Manchester and Lancashire Homes',                          focus: 'feature wall ideas Manchester Lancashire' },
+
+  // ── Local Lancashire & Manchester ──────────────────────────────────────────
   { slug: 'painter-decorator-cost-lancashire',           title: 'Painter and Decorator Costs in Lancashire [2026 Price Guide]',                    focus: 'painter decorator cost Lancashire 2026' },
-  { slug: 'interior-painting-tips-professional-finish',  title: 'Interior Painting Tips: How to Get a Professional Finish',                        focus: 'interior painting tips professional finish' },
-  { slug: 'matt-silk-eggshell-paint-finish-guide',       title: 'Matt, Silk or Eggshell? How to Choose the Right Paint Finish',                   focus: 'matt silk eggshell paint finish difference' },
-  { slug: 'painter-decorator-vs-diy-2026',               title: 'Painter and Decorator vs DIY: Which is Worth It in 2026?',                        focus: 'painter decorator vs DIY worth it' },
-  { slug: 'how-long-does-painting-a-house-take',         title: 'How Long Does It Take to Paint a House? Room-by-Room Guide',                      focus: 'how long does it take to paint a house' },
-  { slug: 'best-time-year-paint-exterior-uk',            title: 'Best Time of Year to Paint the Exterior of Your House in the UK',                 focus: 'best time paint exterior house UK season' },
-  { slug: 'dulux-vs-farrow-ball-comparison',             title: 'Dulux vs Farrow and Ball: Which Paint is Worth the Price?',                        focus: 'Dulux vs Farrow Ball paint comparison UK' },
   { slug: 'finding-painter-decorator-preston',           title: 'Finding a Painter and Decorator in Preston: What to Look For',                    focus: 'painter decorator Preston Lancashire tips' },
   { slug: 'painter-decorator-blackpool-guide',           title: 'Painter and Decorator in Blackpool: Costs and What to Expect',                    focus: 'painter decorator Blackpool cost guide' },
   { slug: 'painter-decorator-burnley-costs',             title: 'Painter and Decorator in Burnley: Local Prices and Services',                     focus: 'painter decorator Burnley costs services' },
-  { slug: 'should-you-paint-before-selling',             title: 'Should You Paint Your House Before Selling? An Honest Guide',                     focus: 'paint house before selling add value' },
-  { slug: 'eco-friendly-paints-guide',                   title: 'Eco-Friendly Paints: Are They Worth It for Your Home?',                           focus: 'eco friendly paints UK review guide' },
-  { slug: 'damp-walls-painting-treatment',               title: 'Damp Walls and Painting: How to Treat and Paint Damp Surfaces',                   focus: 'painting damp walls treatment guide UK' },
-  { slug: 'commercial-painting-manchester-businesses',   title: 'Commercial Painting in Manchester: A Guide for Businesses',                        focus: 'commercial painting Manchester offices shops' },
-  { slug: 'staircase-painting-tips-decorator',           title: 'How to Paint a Staircase: Tips from a Professional Decorator',                    focus: 'how to paint staircase tips professional' },
-  { slug: 'colour-consultation-decorating-guide',        title: 'Colour Consultation for Home Decorating: Do You Need One?',                       focus: 'colour consultation home decorating advice' },
   { slug: 'painter-decorator-salford-guide',             title: 'Painter and Decorator in Salford: Local Services and Prices',                     focus: 'painter decorator Salford Greater Manchester' },
-  { slug: 'painting-rendered-walls-lancashire',          title: 'Painting Rendered Walls in Lancashire: Products, Costs and Tips',                  focus: 'painting rendered walls Lancashire guide' },
-  { slug: 'how-to-hire-painter-decorator-checklist',     title: 'How to Hire a Painter and Decorator: Questions to Ask Before Booking',            focus: 'how to hire painter decorator checklist UK' },
   { slug: 'painter-decorator-bolton-guide',              title: 'Painter and Decorator in Bolton: Costs, Services and Local Tips',                  focus: 'painter decorator Bolton Greater Manchester' },
+  { slug: 'painter-decorator-bury-guide',                title: 'Painter and Decorator in Bury: Costs and Local Services',                         focus: 'painter decorator Bury Greater Manchester' },
+  { slug: 'painter-decorator-chorley-guide',             title: 'Painter and Decorator in Chorley: Local Prices and Tips',                         focus: 'painter decorator Chorley Lancashire' },
+  { slug: 'painter-decorator-blackburn-guide',           title: 'Painter and Decorator in Blackburn: Services, Costs and Advice',                  focus: 'painter decorator Blackburn Lancashire' },
+  { slug: 'painter-decorator-accrington-guide',          title: 'Painter and Decorator in Accrington: What to Expect and Cost',                    focus: 'painter decorator Accrington Lancashire' },
+  { slug: 'painter-decorator-nelson-guide',              title: 'Painter and Decorator in Nelson, Lancashire: Prices and Services',                 focus: 'painter decorator Nelson Lancashire' },
+  { slug: 'painter-decorator-morecambe-guide',           title: 'Painter and Decorator in Morecambe: Local Guide and Costs',                       focus: 'painter decorator Morecambe Lancashire' },
+  { slug: 'painter-decorator-lancaster-guide',           title: 'Painter and Decorator in Lancaster: Costs and What to Expect',                    focus: 'painter decorator Lancaster Lancashire' },
+  { slug: 'painter-decorator-clitheroe-guide',           title: 'Painter and Decorator in Clitheroe: Local Prices and Services',                   focus: 'painter decorator Clitheroe Lancashire' },
+  { slug: 'exterior-painting-manchester-guide',          title: 'Exterior House Painting in Manchester: What You Need to Know',                    focus: 'exterior house painting Manchester guide' },
+  { slug: 'wallpaper-hanging-costs-manchester',          title: 'Wallpaper Hanging in Manchester: Costs, Tips and What to Expect',                 focus: 'wallpaper hanging Manchester cost' },
+  { slug: 'feature-wall-ideas-manchester-homes',         title: 'Feature Wall Ideas for Manchester and Lancashire Homes',                          focus: 'feature wall ideas Manchester Lancashire' },
+  { slug: 'commercial-painting-manchester-businesses',   title: 'Commercial Painting in Manchester: A Guide for Businesses',                        focus: 'commercial painting Manchester offices shops' },
+  { slug: 'painting-rendered-walls-lancashire',          title: 'Painting Rendered Walls in Lancashire: Products, Costs and Tips',                  focus: 'painting rendered walls Lancashire guide' },
+  { slug: 'best-paint-colours-victorian-terraces',       title: 'Best Paint Colours for Victorian Terraces in Lancashire and Manchester',          focus: 'paint colours Victorian terrace Lancashire' },
+  { slug: 'painting-old-victorian-properties',           title: 'Painting Old Victorian Properties: Challenges, Tips and Costs',                   focus: 'painting Victorian property UK guide' },
+
+  // ── Costs & Hiring ─────────────────────────────────────────────────────────
+  { slug: 'how-to-hire-painter-decorator-checklist',     title: 'How to Hire a Painter and Decorator: Questions to Ask Before Booking',            focus: 'how to hire painter decorator checklist UK' },
+  { slug: 'painter-decorator-vs-diy-2026',               title: 'Painter and Decorator vs DIY: Which is Worth It in 2026?',                        focus: 'painter decorator vs DIY worth it' },
+  { slug: 'should-you-paint-before-selling',             title: 'Should You Paint Your House Before Selling? An Honest Guide',                     focus: 'paint house before selling add value' },
+  { slug: 'bedroom-painting-costs-guide',                title: 'How Much Does It Cost to Paint a Bedroom in the UK? 2026 Guide',                  focus: 'cost to paint bedroom UK 2026' },
+  { slug: 'cost-to-paint-exterior-house-uk',             title: 'How Much Does It Cost to Paint the Exterior of a House in the UK?',               focus: 'cost exterior house painting UK 2026' },
+  { slug: 'why-hire-a-professional-decorator',           title: 'Why Hire a Professional Decorator Instead of Doing It Yourself?',                 focus: 'why hire professional decorator not DIY' },
+  { slug: 'painting-rental-property-landlord-guide',     title: 'Painting a Rental Property: A Landlord\'s Guide to Costs and Colours',            focus: 'painting rental property landlord guide UK' },
+  { slug: 'how-long-does-painting-a-house-take',         title: 'How Long Does It Take to Paint a House? Room-by-Room Guide',                      focus: 'how long does it take to paint a house' },
+
+  // ── Paint Tips & Techniques ────────────────────────────────────────────────
+  { slug: 'interior-painting-tips-professional-finish',  title: 'Interior Painting Tips: How to Get a Professional Finish',                        focus: 'interior painting tips professional finish' },
+  { slug: 'matt-silk-eggshell-paint-finish-guide',       title: 'Matt, Silk or Eggshell? How to Choose the Right Paint Finish',                   focus: 'matt silk eggshell paint finish difference' },
+  { slug: 'how-to-paint-a-ceiling',                      title: 'How to Paint a Ceiling Without Streaks or Roller Marks',                          focus: 'how to paint ceiling no streaks UK' },
+  { slug: 'painting-woodwork-skirting-boards',           title: 'How to Paint Woodwork and Skirting Boards: A Professional Guide',                 focus: 'how to paint skirting boards woodwork UK' },
+  { slug: 'how-to-paint-interior-doors',                 title: 'How to Paint Interior Doors: Tips for a Smooth, Long-Lasting Finish',             focus: 'how to paint interior doors UK tips' },
+  { slug: 'staircase-painting-tips-decorator',           title: 'How to Paint a Staircase: Tips from a Professional Decorator',                    focus: 'how to paint staircase tips professional' },
+  { slug: 'how-to-remove-wallpaper',                     title: 'How to Remove Wallpaper Before Painting: Step-by-Step Guide',                     focus: 'how to remove wallpaper before painting UK' },
+  { slug: 'primer-undercoat-guide',                      title: 'Primer vs Undercoat: Which Do You Need and When?',                                focus: 'primer vs undercoat difference UK guide' },
+  { slug: 'how-to-fix-cracked-walls-before-painting',    title: 'How to Fill and Fix Cracked Walls Before Painting',                               focus: 'fill cracked walls before painting UK' },
+  { slug: 'painting-over-dark-colours',                  title: 'How to Paint Over Dark Colours: Getting Good Coverage Without 10 Coats',          focus: 'painting over dark paint colours UK' },
+  { slug: 'textured-wall-painting-guide',                title: 'How to Paint Textured Walls: Tips for Artex and Rough Surfaces',                  focus: 'painting textured walls artex UK guide' },
+  { slug: 'painting-brick-walls-guide',                  title: 'Can You Paint Brick Walls? A UK Guide to Interior and Exterior Brick',            focus: 'painting brick walls UK interior exterior' },
+  { slug: 'how-to-strip-paint-woodwork',                 title: 'How to Strip Paint from Woodwork: Methods, Costs and When to Call a Pro',         focus: 'strip paint woodwork UK methods' },
+  { slug: 'coving-cornice-painting-tips',                title: 'How to Paint Coving and Cornices Without Making a Mess',                          focus: 'how to paint coving cornices UK tips' },
+  { slug: 'radiator-painting-guide',                     title: 'How to Paint Radiators: The Right Way to Get a Professional Finish',              focus: 'how to paint radiators UK guide' },
+  { slug: 'sash-window-painting-guide',                  title: 'How to Paint Sash Windows: Avoiding Common Mistakes',                             focus: 'how to paint sash windows UK tips' },
+  { slug: 'painting-garden-fence-shed-uk',               title: 'How to Paint a Garden Fence or Shed: Products and Tips for the UK',              focus: 'painting garden fence shed UK guide' },
+
+  // ── Room-by-Room ───────────────────────────────────────────────────────────
+  { slug: 'bathroom-painting-tips-damp-proof',           title: 'How to Paint a Bathroom: Damp-Proof Tips and Best Paints for the UK',            focus: 'painting bathroom damp proof UK tips' },
+  { slug: 'kitchen-painting-guide',                      title: 'How to Paint a Kitchen: Choosing the Right Paint and Finish',                    focus: 'kitchen painting guide UK best paint' },
+  { slug: 'hallway-painting-ideas-uk',                   title: 'Hallway Painting Ideas for UK Homes: Colours, Finishes and Tips',                focus: 'hallway painting ideas UK colours' },
+  { slug: 'living-room-painting-guide',                  title: 'Living Room Painting Guide: Colours, Costs and What to Expect',                  focus: 'living room painting guide UK 2026' },
+
+  // ── Colours & Trends ───────────────────────────────────────────────────────
+  { slug: 'neutral-paint-colours-2026',                  title: 'Best Neutral Paint Colours for 2026: What\'s Trending in UK Homes',             focus: 'best neutral paint colours UK 2026 trends' },
+  { slug: 'two-colour-wall-painting-ideas',              title: 'Two-Colour Wall Painting Ideas for UK Homes',                                    focus: 'two colour wall painting ideas UK' },
+  { slug: 'colour-consultation-decorating-guide',        title: 'Colour Consultation for Home Decorating: Do You Need One?',                       focus: 'colour consultation home decorating advice' },
+  { slug: 'dulux-vs-farrow-ball-comparison',             title: 'Dulux vs Farrow and Ball: Which Paint is Worth the Price?',                        focus: 'Dulux vs Farrow Ball paint comparison UK' },
+
+  // ── Property Types & Seasonal ──────────────────────────────────────────────
+  { slug: 'painting-new-build-homes',                    title: 'Painting a New Build Home: What You Need to Know',                               focus: 'painting new build home UK tips' },
+  { slug: 'damp-walls-painting-treatment',               title: 'Damp Walls and Painting: How to Treat and Paint Damp Surfaces',                   focus: 'painting damp walls treatment guide UK' },
+  { slug: 'eco-friendly-paints-guide',                   title: 'Eco-Friendly Paints: Are They Worth It for Your Home?',                           focus: 'eco friendly paints UK review guide' },
+  { slug: 'best-time-year-paint-exterior-uk',            title: 'Best Time of Year to Paint the Exterior of Your House in the UK',                 focus: 'best time paint exterior house UK season' },
 ];
 
 // ── SVG constants (match location pages exactly) ──────────────────────────────
