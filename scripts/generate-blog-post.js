@@ -290,7 +290,7 @@ ${BLOG_CSS}
 
 // ── Article builder ────────────────────────────────────────────────────────────
 function buildArticleHTML(data, topic, dateStr) {
-  const url = `https://thefinallayer.uk/blog/${topic.slug}`;
+  const url = `https://thefinallayer.uk/blog/${topic.slug}/`;
   const pageTitle = `${data.title} | The Final Layer`;
 
   const jsonLd = JSON.stringify({
@@ -311,7 +311,7 @@ function buildArticleHTML(data, topic, dateStr) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thefinallayer.uk' },
-          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://thefinallayer.uk/blog' },
+          { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://thefinallayer.uk/blog/' },
           { '@type': 'ListItem', position: 3, name: data.title, item: url }
         ]
       },
@@ -425,14 +425,14 @@ function buildBlogIndex(posts) {
     '@type': 'Blog',
     name: 'The Final Layer Blog',
     description: 'Painting and decorating advice, cost guides and tips for Manchester and Lancashire homeowners.',
-    url: 'https://thefinallayer.uk/blog',
-    publisher: { '@type': 'Organization', name: 'The Final Layer', url: 'https://thefinallayer.uk' }
+    url: 'https://thefinallayer.uk/blog/',
+    publisher: { '@type': 'Organization', name: 'The Final Layer', url: 'https://thefinallayer.uk/' }
   });
 
   const headHtml = head({
     title: 'Painting &amp; Decorating Blog | The Final Layer | Manchester &amp; Lancashire',
     description: 'Painting and decorating advice, cost guides and tips for Manchester and Lancashire homeowners. Written by Ibrahim Alzoubi, The Final Layer.',
-    url: 'https://thefinallayer.uk/blog',
+    url: 'https://thefinallayer.uk/blog/',
     css: { jsonLd }
   });
 
@@ -479,7 +479,7 @@ ${script()}
 function addToSitemap(slug, dateStr) {
   let sitemap = fs.readFileSync(SITEMAP, 'utf8');
   if (sitemap.includes(`/blog/${slug}`)) return;
-  const entry = `  <url>\n    <loc>https://thefinallayer.uk/blog/${slug}</loc>\n    <lastmod>${dateStr}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`;
+  const entry = `  <url>\n    <loc>https://thefinallayer.uk/blog/${slug}/</loc>\n    <lastmod>${dateStr}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`;
   sitemap = sitemap.replace('</urlset>', `${entry}\n</urlset>`);
   fs.writeFileSync(SITEMAP, sitemap, 'utf8');
 }

@@ -203,7 +203,7 @@ function New-LocationPage {
   }) -join ' &middot; '
 
   # Pre-compute meta strings
-  $pageUrl  = "https://thefinallayer.uk/$slug"
+  $pageUrl  = "https://thefinallayer.uk/$slug/"
   $metaDesc = "Looking for a trusted painter and decorator in ${city}? The Final Layer covers all of $county. Interior painting, exterior painting, wallpapering and feature walls. Free quotes, honest prices. Call Ibrahim direct."
   $ogDesc   = "Professional painter and decorator in $city, $county. Interior painting, exterior, wallpapering and feature walls. Free quotes - speak directly with Ibrahim."
 
