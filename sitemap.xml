@@ -7,68 +7,68 @@
   <!-- ═══ CORE ═══ -->
   <url>
     <loc>https://thefinallayer.uk/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- ═══ LANCASHIRE LOCATION PAGES ═══ -->
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-preston</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-preston/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-blackpool</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-blackpool/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-burnley</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-burnley/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-blackburn</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-blackburn/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-lancaster</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-lancaster/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-chorley</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-chorley/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-accrington</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-accrington/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-morecambe</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-morecambe/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-nelson</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-nelson/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-clitheroe</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-clitheroe/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -76,19 +76,19 @@
 
   <!-- ═══ GREATER MANCHESTER LOCATION PAGES ═══ -->
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-salford</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-salford/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-bolton</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-bolton/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/painter-decorator-bury</loc>
+    <loc>https://thefinallayer.uk/painter-decorator-bury/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -96,14 +96,50 @@
 
   <!-- ═══ BLOG ═══ -->
   <url>
-    <loc>https://thefinallayer.uk/blog</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://thefinallayer.uk/blog/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/blog/painter-decorator-cost-manchester</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://thefinallayer.uk/blog/painter-decorator-cost-manchester/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/how-to-prepare-walls-for-painting/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/painter-decorator-cost-lancashire/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/finding-painter-decorator-preston/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/painter-decorator-blackpool-guide/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/painter-decorator-burnley-costs/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thefinallayer.uk/blog/painter-decorator-salford-guide/</loc>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -111,65 +147,29 @@
   <!-- ═══ SERVICE PAGES — uncomment as you build ═══ -->
   <!--
   <url>
-    <loc>https://thefinallayer.uk/interior-painting-manchester</loc>
+    <loc>https://thefinallayer.uk/interior-painting-manchester/</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/exterior-painting-manchester</loc>
+    <loc>https://thefinallayer.uk/exterior-painting-manchester/</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/wallpaper-hanging-manchester</loc>
+    <loc>https://thefinallayer.uk/wallpaper-hanging-manchester/</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thefinallayer.uk/feature-walls-manchester</loc>
+    <loc>https://thefinallayer.uk/feature-walls-manchester/</loc>
     <lastmod>2026-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   -->
 
-  <url>
-    <loc>https://thefinallayer.uk/blog/how-to-prepare-walls-for-painting</loc>
-    <lastmod>2026-05-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thefinallayer.uk/blog/painter-decorator-cost-lancashire</loc>
-    <lastmod>2026-05-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thefinallayer.uk/blog/finding-painter-decorator-preston</loc>
-    <lastmod>2026-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thefinallayer.uk/blog/painter-decorator-blackpool-guide</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thefinallayer.uk/blog/painter-decorator-burnley-costs</loc>
-    <lastmod>2026-05-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://thefinallayer.uk/blog/painter-decorator-salford-guide</loc>
-    <lastmod>2026-05-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
