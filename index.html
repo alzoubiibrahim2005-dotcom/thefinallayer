@@ -975,6 +975,46 @@ footer {
 }
 .form-submit:hover { opacity: 0.87; transform: translateY(-1px); }
 
+.form-progress { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.3rem; }
+.form-progress-step { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
+.form-progress-step span { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 0.74rem; flex-shrink: 0; transition: background 0.2s, border-color 0.2s, color 0.2s; }
+.form-progress-step.active { color: var(--ink); font-weight: 500; }
+.form-progress-step.active span, .form-progress-step.done span { background: var(--purple); border-color: var(--purple); color: #fff; }
+.form-progress-line { flex: 1; height: 1px; background: var(--border); }
+@media (max-width: 480px) { .form-progress-step span ~ * { display: none; } }
+
+.form-step { display: none; flex-direction: column; gap: 1.1rem; }
+.form-step.active { display: flex; }
+
+.form-option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+.form-option-card { position: relative; display: flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.form-option-card input { position: absolute; opacity: 0; width: 0; height: 0; }
+.form-option-card:hover { border-color: var(--purple-border); }
+.form-option-card:has(input:checked) { border-color: var(--purple); background: var(--purple-dim); }
+.form-option-title { font-size: 0.9rem; font-weight: 500; color: var(--ink); }
+.form-option-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+
+.form-step-actions { display: flex; gap: 0.75rem; }
+.form-step-actions .form-submit { width: auto; flex: 1; }
+.form-step-next { flex: 1; }
+.form-step-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.875rem 1.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.form-step-back:hover { color: var(--ink); border-color: var(--border-mid); }
+
 .form-success {
   display: none;
   align-items: center;
@@ -1253,6 +1293,7 @@ footer {
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wallpaper Hanging", "description": "Wallpaper hanging, feature walls and accent finishes with careful alignment and clean seams."}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Feature Walls", "description": "Decorative feature walls to transform any room."}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Decoration", "description": "Reliable decorating for offices, rentals, shops and small commercial spaces."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Larger Projects & Renovations", "description": "Whole-property refurbishments, new builds, commercial units and rental portfolios, scoped and planned around your timeline."}},
           {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Woodwork & Trims", "description": "Skirting boards, door frames, window sills and all woodwork finished to a high standard."}}
         ]
       },
@@ -1732,6 +1773,50 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
 </section>
 
 
+<!-- BIG PROJECTS / COMMERCIAL -->
+<section id="commercial" class="services-section">
+  <div class="services-header">
+    <div>
+      <div class="section-label fi">Bigger projects</div>
+      <h2 class="fi d1">From single rooms to whole properties.</h2>
+    </div>
+    <p class="services-intro fi d1">Whole-property refurbishments, new builds, commercial units and rental portfolios — scoped properly, planned around your timeline, and finished to the same standard as every job I take on.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card fi">
+      <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+      <div class="service-title">Whole-property projects</div>
+      <div class="service-desc">Multiple rooms or full homes, sequenced and finished room by room to one consistent standard throughout.</div>
+    </div>
+
+    <div class="service-card fi d1">
+      <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></div>
+      <div class="service-title">New builds & renovations</div>
+      <div class="service-desc">Working alongside builders and other trades on new-build finishing, renovations and post-construction touch-ups.</div>
+    </div>
+
+    <div class="service-card fi">
+      <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9M15 21V9"/></svg></div>
+      <div class="service-title">Commercial & retail spaces</div>
+      <div class="service-desc">Offices, shops and other commercial units, scheduled flexibly around your business hours to limit disruption.</div>
+    </div>
+
+    <div class="service-card fi d1">
+      <div class="service-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+      <div class="service-title">Rental portfolios & landlords</div>
+      <div class="service-desc">Multiple units, HMOs and turnaround jobs between tenancies, kept to a schedule that works around your lettings.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem; text-align:center;">
+    <p style="color:var(--muted); font-size:0.92rem; margin-bottom:1.2rem; max-width:560px; margin-left:auto; margin-right:auto;">When a project needs extra hands, I bring in trusted people I've worked alongside for years — so you still deal with me directly from quote to final coat, and the finish stays exactly the same.</p>
+    <a href="#contact" class="btn-primary">
+      Get a quote for your project
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
 
 
 <section id="work" class="work-section">
@@ -1937,44 +2022,103 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
     <!-- Form -->
     <div class="contact-form-wrap">
       <form class="contact-form" id="contactForm">
-        <div class="form-row">
+        <div class="form-progress">
+          <div class="form-progress-step active" data-progress="1"><span>1</span> Your project</div>
+          <div class="form-progress-line"></div>
+          <div class="form-progress-step" data-progress="2"><span>2</span> Your details</div>
+          <div class="form-progress-line"></div>
+          <div class="form-progress-step" data-progress="3"><span>3</span> The job</div>
+        </div>
+
+        <!-- STEP 1: project type -->
+        <div class="form-step active" data-step="1">
           <div class="form-group">
-            <label for="cf-name">Your name</label>
-            <input type="text" id="cf-name" placeholder="John Smith" required>
+            <label>What kind of project is this?</label>
+            <div class="form-option-grid">
+              <label class="form-option-card">
+                <input type="radio" name="cf-type" value="Residential / home" required>
+                <span class="form-option-title">Residential</span>
+                <span class="form-option-desc">A room, a house, or general home decorating</span>
+              </label>
+              <label class="form-option-card">
+                <input type="radio" name="cf-type" value="Business / commercial">
+                <span class="form-option-title">Business / commercial</span>
+                <span class="form-option-desc">An office, shop or other commercial unit</span>
+              </label>
+              <label class="form-option-card">
+                <input type="radio" name="cf-type" value="Landlord / rental property">
+                <span class="form-option-title">Landlord / rental</span>
+                <span class="form-option-desc">A rental property, HMO, or between-tenancy turnaround</span>
+              </label>
+              <label class="form-option-card">
+                <input type="radio" name="cf-type" value="Larger / multi-property project">
+                <span class="form-option-title">Larger project</span>
+                <span class="form-option-desc">Whole property, new build, or multiple units</span>
+              </label>
+            </div>
+          </div>
+          <button type="button" class="form-submit form-step-next">
+            Continue
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <!-- STEP 2: your details -->
+        <div class="form-step" data-step="2">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Your name</label>
+              <input type="text" id="cf-name" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone number</label>
+              <input type="tel" id="cf-phone" placeholder="+44 7700 000000">
+            </div>
           </div>
           <div class="form-group">
-            <label for="cf-phone">Phone number</label>
-            <input type="tel" id="cf-phone" placeholder="+44 7700 000000">
+            <label for="cf-email">Email address</label>
+            <input type="email" id="cf-email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-step-actions">
+            <button type="button" class="form-step-back">Back</button>
+            <button type="button" class="form-submit form-step-next">
+              Continue
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </div>
         </div>
-        <div class="form-group">
-          <label for="cf-email">Email address</label>
-          <input type="email" id="cf-email" placeholder="you@example.com" required>
+
+        <!-- STEP 3: the job -->
+        <div class="form-step" data-step="3">
+          <div class="form-group">
+            <label for="cf-address">Property address</label>
+            <input type="text" id="cf-address" placeholder="e.g. 12 Church Street, Salford, M3 6BG">
+          </div>
+          <div class="form-group">
+            <label for="cf-budget">Approximate budget</label>
+            <select id="cf-budget">
+              <option value="" disabled selected>Select a range</option>
+              <option value="Under £500">Under £500</option>
+              <option value="£500 – £1,000">£500 – £1,000</option>
+              <option value="£1,000 – £2,500">£1,000 – £2,500</option>
+              <option value="£2,500 – £5,000">£2,500 – £5,000</option>
+              <option value="£5,000+">£5,000+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cf-job">What do you need doing?</label>
+            <textarea id="cf-job" rows="4" placeholder="e.g. Full repaint of a 3-bed house in Salford — walls, ceilings and woodwork." required></textarea>
+          </div>
+          <div class="form-step-actions">
+            <button type="button" class="form-step-back">Back</button>
+            <button type="submit" class="form-submit">
+              Send message
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="cf-address">Property address</label>
-          <input type="text" id="cf-address" placeholder="e.g. 12 Church Street, Salford, M3 6BG">
-        </div>
-        <div class="form-group">
-          <label for="cf-budget">Approximate budget</label>
-          <select id="cf-budget">
-            <option value="" disabled selected>Select a range</option>
-            <option value="Under £500">Under £500</option>
-            <option value="£500 – £1,000">£500 – £1,000</option>
-            <option value="£1,000 – £2,500">£1,000 – £2,500</option>
-            <option value="£2,500 – £5,000">£2,500 – £5,000</option>
-            <option value="£5,000+">£5,000+</option>
-            <option value="Not sure yet">Not sure yet</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="cf-job">What do you need doing?</label>
-          <textarea id="cf-job" rows="4" placeholder="e.g. Full repaint of a 3-bed house in Salford — walls, ceilings and woodwork." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">
-          Send message
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+
         <div class="form-whatsapp-divider">
           <span>or</span>
         </div>
@@ -2259,16 +2403,49 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
     });
   });
 
-  // Contact form
+  // Contact form — multi-step navigation
   const form = document.getElementById('contactForm');
   if (form) {
+    const steps = Array.from(form.querySelectorAll('.form-step'));
+    const progressSteps = Array.from(form.querySelectorAll('.form-progress-step'));
+
+    function goToStep(stepNum) {
+      steps.forEach(s => s.classList.toggle('active', Number(s.dataset.step) === stepNum));
+      progressSteps.forEach(p => {
+        const n = Number(p.dataset.progress);
+        p.classList.toggle('active', n === stepNum);
+        p.classList.toggle('done', n < stepNum);
+      });
+      form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    form.querySelectorAll('.form-step-next').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const currentStep = btn.closest('.form-step');
+        const requiredFields = currentStep.querySelectorAll('[required]');
+        for (const field of requiredFields) {
+          if (!field.checkValidity()) { field.reportValidity(); return; }
+        }
+        goToStep(Number(currentStep.dataset.step) + 1);
+      });
+    });
+
+    form.querySelectorAll('.form-step-back').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const currentStep = btn.closest('.form-step');
+        goToStep(Number(currentStep.dataset.step) - 1);
+      });
+    });
+
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const btn = form.querySelector('.form-submit');
+      const btn = form.querySelector('button[type="submit"]');
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
+      const typeField = form.querySelector('input[name="cf-type"]:checked');
       const data = {
+        projectType: typeField ? typeField.value : 'Not specified',
         name:    document.getElementById('cf-name').value,
         phone:   document.getElementById('cf-phone').value,
         email:   document.getElementById('cf-email').value,
@@ -2286,6 +2463,7 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
         if (res.ok) {
           document.getElementById('formSuccess').classList.add('show');
           form.reset();
+          goToStep(1);
         } else {
           alert('Something went wrong — please email info@thefinallayer.uk directly.');
         }
