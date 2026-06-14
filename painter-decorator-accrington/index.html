@@ -149,6 +149,12 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
 .loc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.5rem}
 .loc-grid a{font-size:0.77rem;color:var(--muted);text-decoration:none;padding:0.2rem 0.65rem;border:1px solid var(--border);border-radius:4px;transition:color 0.2s,border-color 0.2s}
 .loc-grid a:hover{color:var(--purple);border-color:var(--purple-border)}
+.reading-section{background:var(--bg);border-top:1px solid var(--border)}
+.reading-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:1.5rem 2rem;text-decoration:none;color:var(--ink);transition:border-color 0.2s,background 0.2s;margin-top:1.5rem}
+.reading-card:hover{border-color:var(--purple-border);background:#fff}
+.reading-card-title{font-size:0.95rem;font-weight:500;color:var(--ink);line-height:1.4}
+.reading-card-label{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:0.4rem}
+.reading-arrow{color:var(--purple);flex-shrink:0}
 @media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}.services-header{flex-direction:column;align-items:flex-start}.services-intro{text-align:left;max-width:100%}.area-grid{grid-template-columns:1fr;gap:2.5rem}.testi-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.nav-hamburger{display:flex}.hero-actions{flex-direction:column;align-items:flex-start}.cta-actions{flex-direction:column}}
 @media(max-width:600px){section{padding:3rem 5%}.hero-loc{padding-top:5.5rem;padding-bottom:3rem}.hero-loc h1{font-size:2rem}.hero-sub{font-size:0.9rem}.trust-strip{grid-template-columns:1fr}.hero-stats{gap:1.5rem}.cta-section h2{font-size:1.9rem}.faq-item{padding:1.2rem 1.25rem}}
@@ -214,6 +220,7 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
       <div class="section-label">Coverage</div>
       <h2>Serving <em>Accrington</em> &amp; nearby</h2>
       <p>The Final Layer is based across Greater Manchester and Lancashire, travelling to Accrington and all surrounding towns regularly. If you are in Lancashire and need a painter and decorator, Ibrahim can help.</p>
+      <p>Accrington has dense streets of Victorian terraced housing typical of East Lancashire. Many properties have been extended or updated over the decades, creating demand for both simple refresh painting and more comprehensive redecoration work across kitchens, lounges and upstairs rooms.</p>
       <p><strong>Areas covered near Accrington</strong> include Oswaldtwistle, Church, Great Harwood, Rishton and Clayton-le-Moors - and anywhere in between. Not sure if we cover your postcode? Call or message and Ibrahim will confirm straight away.</p>
       <div class="promise-list">
         <div class="promise-item"><div class="promise-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="promise-text">Free quote with no obligation - just an honest conversation about your job</span></div>
@@ -225,8 +232,8 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
     <div class="area-aside">
       <div class="area-card"><div class="area-card-label">Call or text</div><div class="area-card-value"><a href="tel:+447386404885" style="color:var(--ink);text-decoration:none;font-weight:500;">07386 404885</a></div></div>
       <div class="area-card"><div class="area-card-label">Email</div><div class="area-card-value"><a href="mailto:info@thefinallayer.uk" style="color:var(--ink);text-decoration:none;font-weight:500;">info@thefinallayer.uk</a></div></div>
-      <div class="area-card"><div class="area-card-label">Hours</div><div class="area-card-value" style="font-size:0.85rem;color:var(--muted);">Mon-Fri 7:30am-6pm<br>Sat 8am-4pm</div></div>
-      <div class="area-card"><div class="area-card-label">Also serving</div><div class="area-card-value" style="font-size:0.85rem;line-height:1.8;"><a href="/painter-decorator-blackburn" style="color:var(--purple);font-weight:500;text-decoration:none;">Blackburn</a> &middot; <a href="/painter-decorator-burnley" style="color:var(--purple);font-weight:500;text-decoration:none;">Burnley</a> &middot; <a href="/painter-decorator-nelson" style="color:var(--purple);font-weight:500;text-decoration:none;">Nelson</a></div></div>
+      <div class="area-card"><div class="area-card-label">Hours</div><div class="area-card-value" style="font-size:0.85rem;color:var(--muted);">Mon&#8211;Fri, 9am&#8211;6pm</div></div>
+      <div class="area-card"><div class="area-card-label">Also serving</div><div class="area-card-value" style="font-size:0.85rem;line-height:1.8;"><a href="/painter-decorator-blackburn/" style="color:var(--purple);font-weight:500;text-decoration:none;">Blackburn</a> &middot; <a href="/painter-decorator-burnley/" style="color:var(--purple);font-weight:500;text-decoration:none;">Burnley</a> &middot; <a href="/painter-decorator-nelson/" style="color:var(--purple);font-weight:500;text-decoration:none;">Nelson</a></div></div>
       <div class="area-card"><div class="area-card-label">Free quote</div><div class="area-card-value" style="font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem;">No obligation. Ibrahim responds the same day.</div><a href="https://thefinallayer.uk/#contact" class="btn-primary" style="font-size:0.85rem;padding:0.65rem 1.35rem;">Contact Ibrahim <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </div>
@@ -246,6 +253,14 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
     <div class="faq-item"><h3 class="faq-q">Do you cover areas near Accrington?</h3><p class="faq-a">Yes. The Final Layer covers all of Accrington and surrounding areas including Oswaldtwistle, Church, Great Harwood, Rishton and Clayton-le-Moors. If you are unsure whether we cover your postcode, just call or message and Ibrahim will confirm straight away.</p></div>
     <div class="faq-item"><h3 class="faq-q">Do you use subcontractors?</h3><p class="faq-a">No. Every job is carried out personally by Ibrahim Alzoubi. You speak to him directly, get your quote from him, and he is on-site from start to finish - no middlemen, no subcontractors, no surprises.</p></div>
   </div>
+</section>
+<section class="reading-section">
+  <div class="section-label">Further reading</div>
+  <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:var(--ink);margin-bottom:0.25rem;">Useful guide for Accrington</h2>
+  <a href="/blog/painter-decorator-accrington-guide/" class="reading-card">
+    <div><div class="reading-card-label">From the blog</div><div class="reading-card-title">Painter and Decorator in Accrington: What to Expect and Cost</div></div>
+    <div class="reading-arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  </a>
 </section>
 <section class="cta-section">
   <div class="section-label">Free quote</div>
@@ -269,19 +284,19 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
   </ul>
   <p class="footer-loc-label">All locations</p>
 <div class="loc-grid">
-  <a href="/painter-decorator-preston">Preston</a>
-  <a href="/painter-decorator-blackpool">Blackpool</a>
-  <a href="/painter-decorator-burnley">Burnley</a>
-  <a href="/painter-decorator-blackburn">Blackburn</a>
-  <a href="/painter-decorator-lancaster">Lancaster</a>
-  <a href="/painter-decorator-chorley">Chorley</a>
-  <a href="/painter-decorator-accrington">Accrington</a>
-  <a href="/painter-decorator-morecambe">Morecambe</a>
-  <a href="/painter-decorator-nelson">Nelson</a>
-  <a href="/painter-decorator-clitheroe">Clitheroe</a>
-  <a href="/painter-decorator-salford">Salford</a>
-  <a href="/painter-decorator-bolton">Bolton</a>
-  <a href="/painter-decorator-bury">Bury</a>
+  <a href="/painter-decorator-preston/">Preston</a>
+  <a href="/painter-decorator-blackpool/">Blackpool</a>
+  <a href="/painter-decorator-burnley/">Burnley</a>
+  <a href="/painter-decorator-blackburn/">Blackburn</a>
+  <a href="/painter-decorator-lancaster/">Lancaster</a>
+  <a href="/painter-decorator-chorley/">Chorley</a>
+  <a href="/painter-decorator-accrington/">Accrington</a>
+  <a href="/painter-decorator-morecambe/">Morecambe</a>
+  <a href="/painter-decorator-nelson/">Nelson</a>
+  <a href="/painter-decorator-clitheroe/">Clitheroe</a>
+  <a href="/painter-decorator-salford/">Salford</a>
+  <a href="/painter-decorator-bolton/">Bolton</a>
+  <a href="/painter-decorator-bury/">Bury</a>
 </div></footer>
 <script>
 const hamburger=document.getElementById('hamburger');

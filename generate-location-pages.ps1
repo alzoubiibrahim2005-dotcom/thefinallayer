@@ -1,20 +1,20 @@
-$base = "C:\Users\alzou\Downloads\the finallayer\thefinallayer"
+﻿$base = "C:\Users\alzou\Downloads\the finallayer\thefinallayer"
 
 # ── LOCATION DATA ─────────────────────────────────────────────────────────────
 $locations = @(
-  @{ city="Preston";     slug="painter-decorator-preston";     county="Lancashire";         lat="53.7632"; lng="-2.7031"; nearby="Chorley, Leyland, Fulwood, Bamber Bridge, Penwortham and Longridge";                 r1t="Ibrahim decorated our Victorian terrace in Fulwood. Living room, hallway and all three bedrooms. Brilliant finish, very tidy, fair price."; r1a="Sarah M."; r1l="Fulwood, Preston";         r2t="Got a quote the same day, started within the week. Everything exactly as discussed. Highly recommend."; r2a="Lee T."; r2l="Ashton-on-Ribble, Preston";  r3t="Full exterior repaint on our 1930s semi. Excellent prep, clean lines and a finish that looks brand new."; r3a="Denise W."; r3l="Penwortham, Preston" }
-  @{ city="Blackpool";   slug="painter-decorator-blackpool";   county="Lancashire";         lat="53.8175"; lng="-3.0357"; nearby="Lytham St Annes, Cleveleys, Poulton-le-Fylde, Fleetwood and Thornton";               r1t="Ibrahim did our whole flat near the Prom. Fresh, clean, absolutely no mess left behind. Would not hesitate to book again."; r1a="James T."; r1l="North Shore, Blackpool";              r2t="Painted our guest rooms during the off-season. Fast, professional and a great result for our guests."; r2a="Carol R."; r2l="South Shore, Blackpool"; r3t="Did our hallway and lounge in a day. Could not believe how quickly it was done without cutting any corners."; r3a="Mike S."; r3l="Blackpool" }
-  @{ city="Burnley";     slug="painter-decorator-burnley";     county="Lancashire";         lat="53.7895"; lng="-2.2375"; nearby="Nelson, Padiham, Brierfield, Colne and Hapton";                                       r1t="Came to Burnley and did a full interior on our terraced house. Fair price, great attitude and an excellent finish throughout."; r1a="Lisa K."; r1l="Burnley";                             r2t="Ibrahim painted our kitchen and living room. Clean lines on the woodwork, exactly the shade we wanted. Really happy."; r2a="Gary H."; r2l="Padiham, Burnley";             r3t="Did a feature wall and redecorated two bedrooms. Arrived on time, left the place spotless. Five stars."; r3a="Anya P."; r3l="Burnley" }
-  @{ city="Blackburn";   slug="painter-decorator-blackburn";   county="Lancashire";         lat="53.7480"; lng="-2.4791"; nearby="Darwen, Accrington, Great Harwood, Rishton and Oswaldtwistle";                        r1t="Ibrahim decorated our semi in Blackburn. Walls, woodwork, the lot. Proper professional job at a price that did not break the bank."; r1a="Mohammed A."; r1l="Blackburn";              r2t="Did our rental flat between tenancies. Quick, tidy and left it looking brand new. Will be using again."; r2a="Rachel B."; r2l="Darwen";                       r3t="Fantastic wallpapering job in our living room. Pattern matched perfectly. Ibrahim clearly knows what he is doing."; r3a="Tom N."; r3l="Blackburn" }
-  @{ city="Lancaster";   slug="painter-decorator-lancaster";   county="Lancashire";         lat="54.0466"; lng="-2.8007"; nearby="Morecambe, Carnforth, Galgate, Halton and Slyne";                                     r1t="Ibrahim came all the way to Lancaster and was worth every penny. Decorated our whole ground floor. Stunning result."; r1a="Clare H."; r1l="Lancaster";                             r2t="Hired for a full exterior on our stone cottage. Great prep work and excellent product choice for the weather up here."; r2a="Stuart L."; r2l="Carnforth, Lancaster";        r3t="Did our new kitchen and utility room. Superb attention to detail on the tiles and skirtings. Very pleased."; r3a="Fiona M."; r3l="Lancaster" }
-  @{ city="Chorley";     slug="painter-decorator-chorley";     county="Lancashire";         lat="53.6529"; lng="-2.6327"; nearby="Leyland, Adlington, Coppull, Euxton and Heath Charnock";                              r1t="Really pleased with the results. Ibrahim painted our lounge, dining room and hallway. Everything tied together perfectly."; r1a="Tom B."; r1l="Chorley";                            r2t="Did our conservatory and a bedroom feature wall. Exactly what we asked for, no fuss, no mess."; r2a="Mandy C."; r2l="Euxton, Chorley";                   r3t="Ibrahim redecorated our entire upstairs. Brilliant communication throughout and a finish we are really proud of."; r3a="Dave R."; r3l="Adlington, Chorley" }
-  @{ city="Accrington";  slug="painter-decorator-accrington";  county="Lancashire";         lat="53.7531"; lng="-2.3637"; nearby="Oswaldtwistle, Church, Great Harwood, Rishton and Clayton-le-Moors";                  r1t="Did our conservatory and dining room. Really professional, turned up when he said and left everything spotless."; r1a="Diane W."; r1l="Accrington";                             r2t="Ibrahim painted the exterior of our terraced house. Looks miles better. The neighbours have already been asking who did it."; r2a="Phil T."; r2l="Oswaldtwistle";              r3t="Wallpapered our feature wall and painted the rest of the room to match. Perfect result, would book again."; r3a="Kelly J."; r3l="Church, Accrington" }
-  @{ city="Morecambe";   slug="painter-decorator-morecambe";   county="Lancashire";         lat="54.0695"; lng="-2.8650"; nearby="Heysham, Lancaster, Carnforth, Hest Bank and Bolton-le-Sands";                        r1t="Excellent work, very tidy. Ibrahim painted our seafront property inside and out. Great products and a superb finish."; r1a="Pete N."; r1l="Morecambe";                            r2t="Did our guest rooms before the season. Fast turnaround, professional throughout, and guests have already noticed."; r2a="Jan H."; r2l="Morecambe";                         r3t="Came highly recommended and lived up to it. Repainted our whole bungalow interior. Would not use anyone else."; r3a="Eric S."; r3l="Heysham, Morecambe" }
-  @{ city="Nelson";      slug="painter-decorator-nelson";      county="Lancashire";         lat="53.8353"; lng="-2.2147"; nearby="Brierfield, Colne, Burnley, Barrowford and Reedley";                                  r1t="Quick, clean and a great finish. Ibrahim decorated our terraced house in Nelson. Done in two days and it looks incredible."; r1a="Ayaan H."; r1l="Nelson";                         r2t="Ibrahim was straightforward to deal with, honest about what was needed and priced fairly. Really happy."; r2a="Cath M."; r2l="Barrowford, Nelson";        r3t="Brilliant job on our feature wall. Wallpaper hung perfectly, no bubbles, no seams showing. Very impressed."; r3a="Kiran P."; r3l="Nelson" }
-  @{ city="Clitheroe";   slug="painter-decorator-clitheroe";   county="Lancashire";         lat="53.8710"; lng="-2.3973"; nearby="Whalley, Longridge, Chatburn, Sabden and Slaidburn";                                  r1t="Ibrahim decorated our farmhouse kitchen and dining room. Superb finish on the woodwork especially. Really happy with the result."; r1a="Ruth D."; r1l="Clitheroe";               r2t="Painted our exterior render and all the windows. Great advice on colour and product, finished exactly on schedule."; r2a="Simon W."; r2l="Whalley, Clitheroe";            r3t="Did our whole downstairs renovation. Ibrahim kept us informed every step of the way. A pleasure to have on site."; r3a="Helen F."; r3l="Clitheroe" }
-  @{ city="Salford";     slug="painter-decorator-salford";     county="Greater Manchester"; lat="53.4875"; lng="-2.2901"; nearby="Manchester, Eccles, Worsley, Swinton, Pendlebury and Irlam";                          r1t="Did our new-build in Salford Quays. Ibrahim understood the spec straight away and delivered exactly what we needed."; r1a="Alex F."; r1l="Salford Quays";                       r2t="Painted our whole flat in one day. Efficient, no mess, and the finish is much better than we expected at the price."; r2a="Jade L."; r2l="Salford";                       r3t="Ibrahim redecorated our office reception. Great attitude, minimal disruption and a result we are proud to show clients."; r3a="Ben H."; r3l="Eccles, Salford" }
-  @{ city="Bolton";      slug="painter-decorator-bolton";      county="Greater Manchester"; lat="53.5779"; lng="-2.4283"; nearby="Horwich, Farnworth, Walkden, Westhoughton and Atherton";                              r1t="Ibrahim painted our Victorian terrace in Bolton. Walls, ceilings, all the woodwork. Excellent finish and very reasonable."; r1a="Mark R."; r1l="Bolton";                      r2t="Did our kitchen and two bedrooms. Turned up on time every day and worked consistently. Really pleased with everything."; r2a="Tracey B."; r2l="Horwich, Bolton";            r3t="Hired Ibrahim for a rental property between tenancies. Did the whole house in a weekend. Outstanding value."; r3a="Paul G."; r3l="Farnworth, Bolton" }
-  @{ city="Bury";        slug="painter-decorator-bury";        county="Greater Manchester"; lat="53.5933"; lng="-2.2986"; nearby="Ramsbottom, Radcliffe, Whitefield, Tottington and Heywood";                           r1t="Done our whole house in Bury. Ibrahim was professional from start to finish. Great communication and a brilliant end result."; r1a="Nicola S."; r1l="Bury";                    r2t="Painted our commercial unit in the town centre. Worked around our hours, no fuss, looked great for opening day."; r2a="Connor M."; r2l="Bury town centre";              r3t="Ibrahim did our feature wall and repainted three rooms. Honest, skilled and a fair price. Could not ask for more."; r3a="Amanda T."; r3l="Ramsbottom, Bury" }
+  @{ city="Preston";     slug="painter-decorator-preston";     county="Lancashire";         lat="53.7632"; lng="-2.7031"; nearby="Chorley, Leyland, Fulwood, Bamber Bridge, Penwortham and Longridge";                 r1t="Ibrahim decorated our Victorian terrace in Fulwood. Living room, hallway and all three bedrooms. Brilliant finish, very tidy, fair price."; r1a="Sarah M."; r1l="Fulwood, Preston";         r2t="Got a quote the same day, started within the week. Everything exactly as discussed. Highly recommend."; r2a="Lee T."; r2l="Ashton-on-Ribble, Preston";  r3t="Full exterior repaint on our 1930s semi. Excellent prep, clean lines and a finish that looks brand new."; r3a="Denise W."; r3l="Penwortham, Preston";       blogSlug="finding-painter-decorator-preston";    blogTitle="Finding a Painter and Decorator in Preston: What to Look For";        houseType="Preston has a varied mix of Victorian terraces in areas like Ribbleton and Ashton, 1930s semis in Penwortham and Fulwood, and newer estates around the city fringe. Many of the older properties have original coving, deep skirting boards and plasterwork that benefits from proper preparation before painting." }
+  @{ city="Blackpool";   slug="painter-decorator-blackpool";   county="Lancashire";         lat="53.8175"; lng="-3.0357"; nearby="Lytham St Annes, Cleveleys, Poulton-le-Fylde, Fleetwood and Thornton";               r1t="Ibrahim did our whole flat near the Prom. Fresh, clean, absolutely no mess left behind. Would not hesitate to book again."; r1a="James T."; r1l="North Shore, Blackpool";              r2t="Painted our guest rooms during the off-season. Fast, professional and a great result for our guests."; r2a="Carol R."; r2l="South Shore, Blackpool"; r3t="Did our hallway and lounge in a day. Could not believe how quickly it was done without cutting any corners."; r3a="Mike S."; r3l="Blackpool";           blogSlug="painter-decorator-blackpool-guide";    blogTitle="Painter and Decorator in Blackpool: Costs and What to Expect";        houseType="Blackpool has a high proportion of guest houses, B&amp;Bs and holiday apartments alongside Victorian terraces close to the seafront. Salt air from the Irish Sea increases wear on exterior paintwork, making the right product choice especially important for properties near the Promenade." }
+  @{ city="Burnley";     slug="painter-decorator-burnley";     county="Lancashire";         lat="53.7895"; lng="-2.2375"; nearby="Nelson, Padiham, Brierfield, Colne and Hapton";                                       r1t="Came to Burnley and did a full interior on our terraced house. Fair price, great attitude and an excellent finish throughout."; r1a="Lisa K."; r1l="Burnley";                             r2t="Ibrahim painted our kitchen and living room. Clean lines on the woodwork, exactly the shade we wanted. Really happy."; r2a="Gary H."; r2l="Padiham, Burnley";             r3t="Did a feature wall and redecorated two bedrooms. Arrived on time, left the place spotless. Five stars."; r3a="Anya P."; r3l="Burnley";                                   blogSlug="painter-decorator-burnley-costs";      blogTitle="Painter and Decorator in Burnley: Local Prices and Services";         houseType="Burnley is predominantly red brick Victorian terraces, many original to the mill town era. Woodwork and skirting boards in these properties often need careful preparation before repainting. Stone-built properties are also common in surrounding villages like Padiham and Hapton." }
+  @{ city="Blackburn";   slug="painter-decorator-blackburn";   county="Lancashire";         lat="53.7480"; lng="-2.4791"; nearby="Darwen, Accrington, Great Harwood, Rishton and Oswaldtwistle";                        r1t="Ibrahim decorated our semi in Blackburn. Walls, woodwork, the lot. Proper professional job at a price that did not break the bank."; r1a="Mohammed A."; r1l="Blackburn";              r2t="Did our rental flat between tenancies. Quick, tidy and left it looking brand new. Will be using again."; r2a="Rachel B."; r2l="Darwen";                       r3t="Fantastic wallpapering job in our living room. Pattern matched perfectly. Ibrahim clearly knows what he is doing."; r3a="Tom N."; r3l="Blackburn";                         blogSlug="painter-decorator-blackburn-guide";    blogTitle="Painter and Decorator in Blackburn: Services, Costs and Advice";      houseType="Blackburn has a mix of Victorian terraces in the town centre and 1960s-70s semis in surrounding areas. Darwen and nearby villages also feature older stone-built cottages. Rental properties are common across the area, and between-tenancy refresh jobs are a regular request." }
+  @{ city="Lancaster";   slug="painter-decorator-lancaster";   county="Lancashire";         lat="54.0466"; lng="-2.8007"; nearby="Morecambe, Carnforth, Galgate, Halton and Slyne";                                     r1t="Ibrahim came all the way to Lancaster and was worth every penny. Decorated our whole ground floor. Stunning result."; r1a="Clare H."; r1l="Lancaster";                             r2t="Hired for a full exterior on our stone cottage. Great prep work and excellent product choice for the weather up here."; r2a="Stuart L."; r2l="Carnforth, Lancaster";        r3t="Did our new kitchen and utility room. Superb attention to detail on the tiles and skirtings. Very pleased."; r3a="Fiona M."; r3l="Lancaster";                               blogSlug="painter-decorator-lancaster-guide";    blogTitle="Painter and Decorator in Lancaster: Costs and What to Expect";        houseType="Lancaster is largely stone-built, with Georgian and Victorian properties throughout the city centre and in villages like Carnforth and Galgate. Many of these older buildings have thick walls and original plasterwork that requires more careful preparation than newer builds." }
+  @{ city="Chorley";     slug="painter-decorator-chorley";     county="Lancashire";         lat="53.6529"; lng="-2.6327"; nearby="Leyland, Adlington, Coppull, Euxton and Heath Charnock";                              r1t="Really pleased with the results. Ibrahim painted our lounge, dining room and hallway. Everything tied together perfectly."; r1a="Tom B."; r1l="Chorley";                            r2t="Did our conservatory and a bedroom feature wall. Exactly what we asked for, no fuss, no mess."; r2a="Mandy C."; r2l="Euxton, Chorley";                   r3t="Ibrahim redecorated our entire upstairs. Brilliant communication throughout and a finish we are really proud of."; r3a="Dave R."; r3l="Adlington, Chorley";               blogSlug="painter-decorator-chorley-guide";      blogTitle="Painter and Decorator in Chorley: Local Prices and Tips";             houseType="Chorley has a good mix of 1930s-1970s suburban semis throughout the town and in villages like Adlington, Coppull and Euxton. Conservatories and single-storey extensions are common, and exterior painting on these additions is a frequent request alongside full interior redecoration." }
+  @{ city="Accrington";  slug="painter-decorator-accrington";  county="Lancashire";         lat="53.7531"; lng="-2.3637"; nearby="Oswaldtwistle, Church, Great Harwood, Rishton and Clayton-le-Moors";                  r1t="Did our conservatory and dining room. Really professional, turned up when he said and left everything spotless."; r1a="Diane W."; r1l="Accrington";                             r2t="Ibrahim painted the exterior of our terraced house. Looks miles better. The neighbours have already been asking who did it."; r2a="Phil T."; r2l="Oswaldtwistle";              r3t="Wallpapered our feature wall and painted the rest of the room to match. Perfect result, would book again."; r3a="Kelly J."; r3l="Church, Accrington";                        blogSlug="painter-decorator-accrington-guide";   blogTitle="Painter and Decorator in Accrington: What to Expect and Cost";        houseType="Accrington has dense streets of Victorian terraced housing typical of East Lancashire. Many properties have been extended or updated over the decades, creating demand for both simple refresh painting and more comprehensive redecoration work across kitchens, lounges and upstairs rooms." }
+  @{ city="Morecambe";   slug="painter-decorator-morecambe";   county="Lancashire";         lat="54.0695"; lng="-2.8650"; nearby="Heysham, Lancaster, Carnforth, Hest Bank and Bolton-le-Sands";                        r1t="Excellent work, very tidy. Ibrahim painted our seafront property inside and out. Great products and a superb finish."; r1a="Pete N."; r1l="Morecambe";                            r2t="Did our guest rooms before the season. Fast turnaround, professional throughout, and guests have already noticed."; r2a="Jan H."; r2l="Morecambe";                         r3t="Came highly recommended and lived up to it. Repainted our whole bungalow interior. Would not use anyone else."; r3a="Eric S."; r3l="Heysham, Morecambe";                    blogSlug="painter-decorator-morecambe-guide";    blogTitle="Painter and Decorator in Morecambe: Local Guide and Costs";           houseType="Morecambe has a large number of older properties, guest houses and B&amp;Bs along the seafront and in residential areas. Coastal weather accelerates wear on exterior paintwork here more than inland, making paint quality and surface preparation especially important for lasting results." }
+  @{ city="Nelson";      slug="painter-decorator-nelson";      county="Lancashire";         lat="53.8353"; lng="-2.2147"; nearby="Brierfield, Colne, Burnley, Barrowford and Reedley";                                  r1t="Quick, clean and a great finish. Ibrahim decorated our terraced house in Nelson. Done in two days and it looks incredible."; r1a="Ayaan H."; r1l="Nelson";                         r2t="Ibrahim was straightforward to deal with, honest about what was needed and priced fairly. Really happy."; r2a="Cath M."; r2l="Barrowford, Nelson";        r3t="Brilliant job on our feature wall. Wallpaper hung perfectly, no bubbles, no seams showing. Very impressed."; r3a="Kiran P."; r3l="Nelson";                                   blogSlug="painter-decorator-nelson-guide";       blogTitle="Painter and Decorator in Nelson, Lancashire: Prices and Services";    houseType="Nelson is a former mill town with a high proportion of Victorian terraced housing. Two-up two-down properties are typical here, often with small yards and closely packed streets. Feature walls and full interior refreshes are popular upgrades for these characterful homes." }
+  @{ city="Clitheroe";   slug="painter-decorator-clitheroe";   county="Lancashire";         lat="53.8710"; lng="-2.3973"; nearby="Whalley, Longridge, Chatburn, Sabden and Slaidburn";                                  r1t="Ibrahim decorated our farmhouse kitchen and dining room. Superb finish on the woodwork especially. Really happy with the result."; r1a="Ruth D."; r1l="Clitheroe";               r2t="Painted our exterior render and all the windows. Great advice on colour and product, finished exactly on schedule."; r2a="Simon W."; r2l="Whalley, Clitheroe";            r3t="Did our whole downstairs renovation. Ibrahim kept us informed every step of the way. A pleasure to have on site."; r3a="Helen F."; r3l="Clitheroe";                          blogSlug="painter-decorator-cost-lancashire";    blogTitle="Painter and Decorator Costs in Lancashire [2026 Price Guide]";        houseType="Clitheroe has a mix of stone-built townhouses in the centre and rural farmhouses and cottages across the Ribble Valley. These older stone properties often require specialist exterior paint products. Newer builds on the outskirts are also common and present more straightforward painting jobs." }
+  @{ city="Salford";     slug="painter-decorator-salford";     county="Greater Manchester"; lat="53.4875"; lng="-2.2901"; nearby="Manchester, Eccles, Worsley, Swinton, Pendlebury and Irlam";                          r1t="Did our new-build in Salford Quays. Ibrahim understood the spec straight away and delivered exactly what we needed."; r1a="Alex F."; r1l="Salford Quays";                       r2t="Painted our whole flat in one day. Efficient, no mess, and the finish is much better than we expected at the price."; r2a="Jade L."; r2l="Salford";                       r3t="Ibrahim redecorated our office reception. Great attitude, minimal disruption and a result we are proud to show clients."; r3a="Ben H."; r3l="Eccles, Salford";                 blogSlug="painter-decorator-salford-guide";      blogTitle="Painter and Decorator in Salford: Local Services and Prices";         houseType="Salford has rapid development around Salford Quays producing new-build apartments and commercial spaces, alongside older Victorian terraces in areas like Eccles and Worsley. New builds often need a first-coat refresh within the first year, and the demand for both residential and commercial decoration is high." }
+  @{ city="Bolton";      slug="painter-decorator-bolton";      county="Greater Manchester"; lat="53.5779"; lng="-2.4283"; nearby="Horwich, Farnworth, Walkden, Westhoughton and Atherton";                              r1t="Ibrahim painted our Victorian terrace in Bolton. Walls, ceilings, all the woodwork. Excellent finish and very reasonable."; r1a="Mark R."; r1l="Bolton";                      r2t="Did our kitchen and two bedrooms. Turned up on time every day and worked consistently. Really pleased with everything."; r2a="Tracey B."; r2l="Horwich, Bolton";            r3t="Hired Ibrahim for a rental property between tenancies. Did the whole house in a weekend. Outstanding value."; r3a="Paul G."; r3l="Farnworth, Bolton";                        blogSlug="painter-decorator-bolton-guide";       blogTitle="Painter and Decorator in Bolton: Costs, Services and Local Tips";     houseType="Bolton has Victorian terraces in the town centre giving way to 1930s-1950s semis in suburbs like Horwich, Westhoughton and Farnworth. The mix of property types means demand for both traditional interior painting and exterior render and render painting is consistently high across the area." }
+  @{ city="Bury";        slug="painter-decorator-bury";        county="Greater Manchester"; lat="53.5933"; lng="-2.2986"; nearby="Ramsbottom, Radcliffe, Whitefield, Tottington and Heywood";                           r1t="Done our whole house in Bury. Ibrahim was professional from start to finish. Great communication and a brilliant end result."; r1a="Nicola S."; r1l="Bury";                    r2t="Painted our commercial unit in the town centre. Worked around our hours, no fuss, looked great for opening day."; r2a="Connor M."; r2l="Bury town centre";              r3t="Ibrahim did our feature wall and repainted three rooms. Honest, skilled and a fair price. Could not ask for more."; r3a="Amanda T."; r3l="Ramsbottom, Bury";                 blogSlug="painter-decorator-bury-guide";         blogTitle="Painter and Decorator in Bury: Costs and Local Services";             houseType="Bury has a blend of Victorian terraced housing near the town centre and larger 1930s-1960s semis in suburbs like Ramsbottom, Whitefield and Tottington. Many Victorian properties have original coving and woodwork that rewards careful preparation, and feature wall requests are particularly popular." }
 )
 
 # ── FIX 4: NEARBY LOCATION LINKS (city → slugs of nearby pages) ──────────────
@@ -46,19 +46,19 @@ $FAVICON   = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewB
 # ── FIX 8: FOOTER LOCATION GRID (all 13 pages, used on every location page) ──
 $FOOTER_LOCS = @'
 <div class="loc-grid">
-  <a href="/painter-decorator-preston">Preston</a>
-  <a href="/painter-decorator-blackpool">Blackpool</a>
-  <a href="/painter-decorator-burnley">Burnley</a>
-  <a href="/painter-decorator-blackburn">Blackburn</a>
-  <a href="/painter-decorator-lancaster">Lancaster</a>
-  <a href="/painter-decorator-chorley">Chorley</a>
-  <a href="/painter-decorator-accrington">Accrington</a>
-  <a href="/painter-decorator-morecambe">Morecambe</a>
-  <a href="/painter-decorator-nelson">Nelson</a>
-  <a href="/painter-decorator-clitheroe">Clitheroe</a>
-  <a href="/painter-decorator-salford">Salford</a>
-  <a href="/painter-decorator-bolton">Bolton</a>
-  <a href="/painter-decorator-bury">Bury</a>
+  <a href="/painter-decorator-preston/">Preston</a>
+  <a href="/painter-decorator-blackpool/">Blackpool</a>
+  <a href="/painter-decorator-burnley/">Burnley</a>
+  <a href="/painter-decorator-blackburn/">Blackburn</a>
+  <a href="/painter-decorator-lancaster/">Lancaster</a>
+  <a href="/painter-decorator-chorley/">Chorley</a>
+  <a href="/painter-decorator-accrington/">Accrington</a>
+  <a href="/painter-decorator-morecambe/">Morecambe</a>
+  <a href="/painter-decorator-nelson/">Nelson</a>
+  <a href="/painter-decorator-clitheroe/">Clitheroe</a>
+  <a href="/painter-decorator-salford/">Salford</a>
+  <a href="/painter-decorator-bolton/">Bolton</a>
+  <a href="/painter-decorator-bury/">Bury</a>
 </div>
 '@
 
@@ -178,6 +178,12 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
 .loc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem;margin-top:0.5rem}
 .loc-grid a{font-size:0.77rem;color:var(--muted);text-decoration:none;padding:0.2rem 0.65rem;border:1px solid var(--border);border-radius:4px;transition:color 0.2s,border-color 0.2s}
 .loc-grid a:hover{color:var(--purple);border-color:var(--purple-border)}
+.reading-section{background:var(--bg);border-top:1px solid var(--border)}
+.reading-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:1.5rem 2rem;text-decoration:none;color:var(--ink);transition:border-color 0.2s,background 0.2s;margin-top:1.5rem}
+.reading-card:hover{border-color:var(--purple-border);background:#fff}
+.reading-card-title{font-size:0.95rem;font-weight:500;color:var(--ink);line-height:1.4}
+.reading-card-label{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--purple);margin-bottom:0.4rem}
+.reading-arrow{color:var(--purple);flex-shrink:0}
 @media(max-width:900px){.trust-strip{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:1fr}.services-header{flex-direction:column;align-items:flex-start}.services-intro{text-align:left;max-width:100%}.area-grid{grid-template-columns:1fr;gap:2.5rem}.testi-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.nav-links{display:none}.nav-hamburger{display:flex}.hero-actions{flex-direction:column;align-items:flex-start}.cta-actions{flex-direction:column}}
 @media(max-width:600px){section{padding:3rem 5%}.hero-loc{padding-top:5.5rem;padding-bottom:3rem}.hero-loc h1{font-size:2rem}.hero-sub{font-size:0.9rem}.trust-strip{grid-template-columns:1fr}.hero-stats{gap:1.5rem}.cta-section h2{font-size:1.9rem}.faq-item{padding:1.2rem 1.25rem}}
@@ -186,12 +192,15 @@ footer{background:var(--bg-soft);border-top:1px solid var(--border);padding:3rem
 # ── PAGE GENERATOR ────────────────────────────────────────────────────────────
 function New-LocationPage {
   param($loc)
-  $city   = $loc.city
-  $slug   = $loc.slug
-  $county = $loc.county
-  $lat    = $loc.lat
-  $lng    = $loc.lng
-  $nearby = $loc.nearby
+  $city      = $loc.city
+  $slug      = $loc.slug
+  $county    = $loc.county
+  $lat       = $loc.lat
+  $lng       = $loc.lng
+  $nearby    = $loc.nearby
+  $blogSlug  = $loc.blogSlug
+  $blogTitle = $loc.blogTitle
+  $houseType = $loc.houseType
   $r1t=$loc.r1t; $r1a=$loc.r1a; $r1l=$loc.r1l
   $r2t=$loc.r2t; $r2a=$loc.r2a; $r2l=$loc.r2l
   $r3t=$loc.r3t; $r3a=$loc.r3a; $r3l=$loc.r3l
@@ -199,7 +208,7 @@ function New-LocationPage {
   # FIX 4: Build nearby location links for area-aside
   $nearbyLinksHtml = ($nearbyLinksMap[$city] -split ',' | ForEach-Object {
     $p = $_ -split '\|'
-    "<a href=`"/$($p[1])`" style=`"color:var(--purple);font-weight:500;text-decoration:none;`">$($p[0])</a>"
+    "<a href=`"/$($p[1])/`" style=`"color:var(--purple);font-weight:500;text-decoration:none;`">$($p[0])</a>"
   }) -join ' &middot; '
 
   # Pre-compute meta strings
@@ -281,7 +290,7 @@ function New-LocationPage {
   # FIX 3: <main> landmark opens here
   $html += "<main>`n"
 
-  # HERO — FIX 7: semantic breadcrumb nav/ol/li
+  # HERO - FIX 7: semantic breadcrumb nav/ol/li
   $html += "<section class=`"hero-loc`">`n"
   $html += "  <nav aria-label=`"Breadcrumb`" class=`"breadcrumb-nav`">`n"
   $html += "    <ol class=`"breadcrumb`"><li><a href=`"https://thefinallayer.uk`">Home</a></li><li aria-current=`"page`">Painter &amp; Decorator $city</li></ol>`n"
@@ -308,7 +317,7 @@ function New-LocationPage {
   $html += "  <div class=`"trust-item`"><div class=`"trust-title`">5&#9733; rated</div><div class=`"trust-sub`">Verified customer reviews</div></div>`n"
   $html += "</div>`n"
 
-  # SERVICES — FIX 5: service-title is now <h3>
+  # SERVICES - FIX 5: service-title is now <h3>
   $html += "<section class=`"services-section`">`n"
   $html += "  <div class=`"services-header`"><h2>Services in<br><em>$city</em></h2><p class=`"services-intro`">Interior or exterior, residential or commercial - The Final Layer handles it all across $city and $county.</p></div>`n"
   $html += "  <div class=`"services-grid`">`n"
@@ -319,13 +328,14 @@ function New-LocationPage {
   $html += "  </div>`n"
   $html += "</section>`n"
 
-  # AREA — FIX 4: nearby location links in aside card
+  # AREA - FIX 4: nearby location links in aside card
   $html += "<section class=`"area-section`">`n"
   $html += "  <div class=`"area-grid`">`n"
   $html += "    <div class=`"area-copy`">`n"
   $html += "      <div class=`"section-label`">Coverage</div>`n"
   $html += "      <h2>Serving <em>$city</em> &amp; nearby</h2>`n"
   $html += "      <p>The Final Layer is based across Greater Manchester and Lancashire, travelling to $city and all surrounding towns regularly. If you are in $county and need a painter and decorator, Ibrahim can help.</p>`n"
+  $html += "      <p>$houseType</p>`n"
   $html += "      <p><strong>Areas covered near $city</strong> include $nearby - and anywhere in between. Not sure if we cover your postcode? Call or message and Ibrahim will confirm straight away.</p>`n"
   $html += "      <div class=`"promise-list`">`n"
   $html += "        <div class=`"promise-item`"><div class=`"promise-check`">$CHECKSVG</div><span class=`"promise-text`">Free quote with no obligation - just an honest conversation about your job</span></div>`n"
@@ -337,7 +347,7 @@ function New-LocationPage {
   $html += "    <div class=`"area-aside`">`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Call or text</div><div class=`"area-card-value`"><a href=`"tel:+447386404885`" style=`"color:var(--ink);text-decoration:none;font-weight:500;`">07386 404885</a></div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Email</div><div class=`"area-card-value`"><a href=`"mailto:info@thefinallayer.uk`" style=`"color:var(--ink);text-decoration:none;font-weight:500;`">info@thefinallayer.uk</a></div></div>`n"
-  $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Hours</div><div class=`"area-card-value`" style=`"font-size:0.85rem;color:var(--muted);`">Mon-Fri 7:30am-6pm<br>Sat 8am-4pm</div></div>`n"
+  $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Hours</div><div class=`"area-card-value`" style=`"font-size:0.85rem;color:var(--muted);`">Mon&#8211;Fri, 9am&#8211;6pm</div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Also serving</div><div class=`"area-card-value`" style=`"font-size:0.85rem;line-height:1.8;`">$nearbyLinksHtml</div></div>`n"
   $html += "      <div class=`"area-card`"><div class=`"area-card-label`">Free quote</div><div class=`"area-card-value`" style=`"font-size:0.85rem;color:var(--muted);margin-bottom:0.75rem;`">No obligation. Ibrahim responds the same day.</div><a href=`"https://thefinallayer.uk/#contact`" class=`"btn-primary`" style=`"font-size:0.85rem;padding:0.65rem 1.35rem;`">Contact Ibrahim $ARROWSVGS</a></div>`n"
   $html += "    </div>`n"
@@ -365,6 +375,16 @@ function New-LocationPage {
   $html += "  </div>`n"
   $html += "</section>`n"
 
+  # FURTHER READING
+  $html += "<section class=`"reading-section`">`n"
+  $html += "  <div class=`"section-label`">Further reading</div>`n"
+  $html += "  <h2 style=`"font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:var(--ink);margin-bottom:0.25rem;`">Useful guide for $city</h2>`n"
+  $html += "  <a href=`"/blog/$blogSlug/`" class=`"reading-card`">`n"
+  $html += "    <div><div class=`"reading-card-label`">From the blog</div><div class=`"reading-card-title`">$blogTitle</div></div>`n"
+  $html += "    <div class=`"reading-arrow`">$ARROWSVG</div>`n"
+  $html += "  </a>`n"
+  $html += "</section>`n"
+
   # CTA
   $html += "<section class=`"cta-section`">`n"
   $html += "  <div class=`"section-label`">Free quote</div>`n"
@@ -379,7 +399,7 @@ function New-LocationPage {
   # FIX 3: </main> closes here
   $html += "</main>`n"
 
-  # FOOTER — FIX 8: location grid
+  # FOOTER - FIX 8: location grid
   $html += "<footer>`n"
   $html += "  <a href=`"https://thefinallayer.uk`" class=`"footer-logo`">$LOGOSVG</a>`n"
   $html += "  <p class=`"footer-text`">&#169; 2026 The Final Layer &middot; Ibrahim Alzoubi &middot; $city, $county</p>`n"
