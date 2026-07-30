@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://thefinallayer.uk/">
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="keywords" content="painter decorator Manchester, painter decorator Lancashire, painter decorator Preston, painter decorator Blackpool, painter decorator Burnley, painter decorator Blackburn, painter decorator Lancaster, painter decorator Chorley, painter decorator Accrington, painter decorator Morecambe, painter decorator Nelson, painter decorator Clitheroe, interior painting Manchester, exterior painting Manchester, wallpaper hanging Manchester, decorator Salford, painter Bolton, painter Bury, painter Preston, painter Blackpool, painter Burnley, painter Blackburn, painter Lancaster, painter decorator near me, house painting Manchester, painting and decorating Manchester, local painter decorator, cheap painter Manchester, professional decorator Lancashire, painting decorating North West">
+<meta name="keywords" content="painter decorator Manchester, painter decorator Leeds, painter decorator Lancashire, painter decorator West Yorkshire, painter decorator Preston, painter decorator Blackpool, painter decorator Burnley, painter decorator Blackburn, painter decorator Lancaster, painter decorator Chorley, painter decorator Accrington, painter decorator Morecambe, painter decorator Nelson, painter decorator Clitheroe, interior painting Manchester, exterior painting Manchester, wallpaper hanging Manchester, interior painting Leeds, exterior painting Leeds, decorator Salford, painter Bolton, painter Bury, painter Preston, painter Blackpool, painter Burnley, painter Blackburn, painter Lancaster, painter decorator near me, house painting Manchester, painting and decorating Manchester, painting and decorating Leeds, local painter decorator, cheap painter Manchester, professional decorator Lancashire, painting decorating North West">
 <meta name="author" content="Ibrahim Alzoubi — The Final Layer">
 <meta name="geo.region" content="GB-MAN">
 <meta name="geo.placename" content="Manchester">
@@ -144,6 +144,9 @@ nav {
 .mobile-menu a:hover { color: var(--purple); }
 .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 6px; font-weight: 500 !important; transition: opacity 0.2s !important; }
 .nav-cta:hover { opacity: 0.85; }
+.nav-phone { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--ink) !important; font-size: 0.875rem; font-weight: 500; text-decoration: none; white-space: nowrap; }
+.nav-phone:hover { color: var(--purple) !important; }
+.sticky-call { display: none; }
 .mobile-menu .mobile-cta {
   margin-top: 1rem;
   background: var(--purple);
@@ -843,6 +846,8 @@ footer {
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  .sticky-call { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--purple); color: #fff; align-items: center; justify-content: center; gap: 0.6rem; padding: 1rem 2rem; font-weight: 600; font-size: 1rem; text-decoration: none; letter-spacing: 0.01em; }
+  body { padding-bottom: 62px; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-img-wrap { max-width: 440px; }
   .trust-strip { grid-template-columns: repeat(2, 1fr); }
@@ -1458,6 +1463,7 @@ footer {
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="/blog">Blog</a></li>
     <li><a href="https://www.instagram.com/thefinallayer.uk?igsh=MWx1NmhwdDFrY3JpMg==" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+    <li><a href="tel:+447386404885" class="nav-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.06 12a19.8 19.8 0 0 1-3-8.59A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.09 8.9a16 16 0 0 0 5.91 5.91l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.71A2 2 0 0 1 22 15.92z"/></svg>07386 404 885</a></li>
     <li><a href="#contact" class="nav-cta">Get a quote</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -1484,7 +1490,7 @@ footer {
 
   <!-- Left copy -->
   <div class="hero-left">
-    <div class="hero-badge fi">Painter & Decorator · Manchester, Lancashire & Preston</div>
+    <div class="hero-badge fi">Painter & Decorator · Manchester, Lancashire, Preston & Leeds</div>
     <h1 class="hero-headline fi d1">
       You deal with<br>
       <em>me</em> — start<br>
@@ -2160,7 +2166,7 @@ footer {
         </div>
         <div>
           <div class="contact-aside-label">Area covered</div>
-          <div class="contact-aside-value">Manchester, Preston, Blackpool, Burnley, Blackburn, Lancaster, Chorley, Accrington, Morecambe & across Lancashire</div>
+          <div class="contact-aside-value">Manchester, Leeds, Preston, Blackpool, Burnley, Blackburn, Lancaster, Chorley, Accrington, Morecambe & across Lancashire and West Yorkshire</div>
         </div>
       </div>
       <div class="contact-aside-item">
@@ -2663,6 +2669,11 @@ document.querySelectorAll('a[target="_blank"]').forEach(function(link) {
   }
 })();
 </script>
+
+<a href="tel:+447386404885" class="sticky-call" aria-label="Call Ibrahim">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.06 12a19.8 19.8 0 0 1-3-8.59A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.71 2.81a2 2 0 0 1-.45 2.11L7.09 8.9a16 16 0 0 0 5.91 5.91l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.71A2 2 0 0 1 22 15.92z"/></svg>
+  Call 07386 404 885
+</a>
 
 </body>
 </html>

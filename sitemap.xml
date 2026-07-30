@@ -7,7 +7,7 @@
   <!-- ═══ CORE ═══ -->
   <url>
     <loc>https://thefinallayer.uk/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -92,6 +92,14 @@
     <lastmod>2026-05-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- ═══ WEST YORKSHIRE LOCATION PAGES ═══ -->
+  <url>
+    <loc>https://thefinallayer.uk/painter-decorator-leeds/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- ═══ BLOG ═══ -->
