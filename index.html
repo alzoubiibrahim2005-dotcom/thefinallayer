@@ -32,6 +32,11 @@
 <meta name="twitter:image" content="https://thefinallayer.uk/og-image.jpg">
 <meta name="twitter:image:alt" content="The Final Layer — Painter &amp; Decorator Manchester and Lancashire">
 <!-- JSON-LD Structured Data -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="/images/hero.png" fetchpriority="high">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"></noscript>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9RYJJVZLJ"></script>
 <script>
@@ -40,9 +45,6 @@
   gtag('js', new Date());
   gtag('config', 'G-V9RYJJVZLJ');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -1507,9 +1509,12 @@ footer {
   <div class="hero-right fi d2">
     <div class="hero-img-main">
       <img
-alt="Professional painter and decorator at work in Manchester — The Final Layer"         src="/images/hero.png"
-        alt="Painter working carefully on an interior wall"
+        src="/images/hero.png"
+        alt="Professional painter and decorator at work in Manchester — The Final Layer"
         loading="eager"
+        fetchpriority="high"
+        width="1176"
+        height="1338"
       />
 
     </div>
@@ -1580,9 +1585,11 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
     <div class="about-img-wrap fi">
       <div class="about-img">
         <img
-          src="/images/work-interior.jpg" loading="lazy"
+          src="/images/work-interior.jpg"
           alt="Painter and decorator at work on a wall"
           loading="lazy"
+          width="1086"
+          height="1448"
         />
       </div>
     </div>
@@ -1823,7 +1830,7 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
   <div class="work-stages fi d2">
     <div class="work-stage">
       <div class="work-stage-img">
-        <img src="/images/work-before.jpg" loading="lazy" alt="Before">
+        <img src="/images/work-before.jpg" loading="lazy" alt="Before" width="1200" height="900">
         <div class="work-stage-label work-stage-label-before">Before</div>
       </div>
       <div class="work-stage-title">The starting point</div>
@@ -1831,7 +1838,7 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
     </div>
     <div class="work-stage">
       <div class="work-stage-img">
-        <img src="/images/work-during.jpg" loading="lazy" alt="During">
+        <img src="/images/work-during.jpg" loading="lazy" alt="During" width="1200" height="900">
         <div class="work-stage-label work-stage-label-during">1st Coat</div>
       </div>
       <div class="work-stage-title">First coat down</div>
@@ -1839,7 +1846,7 @@ alt="Professional painter and decorator at work in Manchester — The Final Laye
     </div>
     <div class="work-stage">
       <div class="work-stage-img">
-        <img src="/images/work-after.jpg" loading="lazy" alt="The final layer — finished room Manchester">
+        <img src="/images/work-after.jpg" loading="lazy" alt="The final layer — finished room Manchester" width="1200" height="900">
         <div class="work-stage-label work-stage-label-after">Final Layer</div>
       </div>
       <div class="work-stage-title">The final layer</div>
